@@ -1,0 +1,83 @@
+#carousalCategory{
+     border: 1px solid red;
+     height:500px;
+     width:90%;
+     display:flex;
+     margin:auto;
+     margin-top: 20px;
+}
+/* #carousalCategory>div{
+    border:1px solid green;
+    width:60%;
+} */
+
+.category{
+    border:1px solid green;
+    width:30%;
+}
+.carousal{
+    border:1px solid blue;
+    width:70%;
+}
+.carousal img{
+    width:100%;
+    height:100%;
+}
+
+#banner{
+    border:1px solid red;
+    width:90%;    
+    height:auto;
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#banner>img{
+    width:100%;
+}
+
+
+#carousel1{
+  display:flex;
+  border:1px solid red;
+  width:90%;
+  margin:auto;
+}
+#carousel1>div{
+    border:1px solid green;
+    text-align: center;
+    display: block;
+}
+
+#images{
+    border:1px solid red;
+    width:90%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+#images>div{
+    border:1px solid green;
+    width:49%;
+}
+#images>div img{
+    width:100%;
+}
+
+/* banner2 */
+/* filtered product append is pending for now */
+
+
+#banner2{
+    border:1px solid red;
+    width:90%;
+    margin:auto;
+}
+
+#banner2>img{
+    width:100%;
+    /* margin for filtered products */
+    margin-top: 200px;
+}
