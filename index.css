@@ -99,5 +99,6 @@
 #subs-btn{
    height: 35px;
    background-color: rgb(226, 61, 154);
+   border: rgb(226, 61, 154) ;
    color: aliceblue;
 }
