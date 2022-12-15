@@ -1,4 +1,4 @@
-//import {navbar,footer} from "./components/navbar.js";
+import { footer } from "./components/navbar.js";
 
 let carousel_div = document.querySelector(".carousal");
 
@@ -88,5 +88,8 @@ function append(data){
 }
 
 
-   
+  //  footer file imported from navbar.js....
+  let footer_Part=document.getElementById("footer")
+  console.log(footer());
+  footer_Part.innerHTML=footer();
   
