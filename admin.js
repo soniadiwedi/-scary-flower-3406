@@ -62,7 +62,9 @@ function createTabe(arr) {
 
     td1.innerText = ele.name;
     td2.innerText = ele.price;
-    td3.innerText = ele.image;
+    td3.innerText = ele.image.substring(0, 20);
+    //console.log(str.substring(1, 3));
+    td3.setAttribute("class", "td3");
     td4.innerText = ele.category;
     td5.innerText = "Edit";
     tr.append(td1, td2, td3, td4, td5);
