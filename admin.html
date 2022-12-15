@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./admin.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="mainContainer">
+      <div id="formSection">
+        <h2>Add Products</h2>
+        <form autocomplete="on">
+          <p>
+            <label class="formLebel">Name</label>
+            <br />
+            <input
+              id="name"
+              class="inputLabel"
+              required="required"
+              type="text"
+              placeholder="productName"
+            />
+          </p>
+          <p>
+            <label class="formLebel">Price</label>
+            <br />
+            <input
+              id="price"
+              class="inputLabel"
+              required="required"
+              type="text"
+              placeholder="productPrice"
+            />
+          </p>
+          <p>
+            <label class="formLebel">Image URL</label>
+            <br />
+            <input
+              id="imgUrl"
+              class="inputLabel"
+              required="required"
+              type="text"
+              placeholder="productImg"
+            />
+          </p>
+          <p>
+            Select Category
+            <br />
+            <select class="inputLabel">
+              <option value="Skin">Skin</option>
+              <option value="Hair">Hair</option>
+              <option value="Fragrance">Fragrance</option>
+              <option value="Make-up">Make-up</option>
+              <option value="Personal">Personal</option>
+              <option value="Mom care">Mom care</option>
+              <option value="Ayurveda">Ayurveda</option>
+            </select>
+          </p>
+          <p id="productSubmit">
+            <input id="addProductButton" type="submit" value="Add Product" />
+          </p>
+        </form>
+        <hr class="hrTag" />
+        <h2>Item limit per Page</h2>
+        <select class="inputLabel" id="itemPerPage">
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+        </select>
+      </div>
+      <div id="tableSection">
+        <h2>Product detials Table</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Category</th>
+            <th>Edit</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./admin.js"></script>
