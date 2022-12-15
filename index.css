@@ -47,6 +47,7 @@
 ul{
     list-style: none;
 }
+
 /* carousal  */
 #carousalCategory{
     border: 1px solid red;
@@ -109,6 +110,20 @@ ul{
 #images>div img{
    width:100%;
 }
+
+/* category card  */
+.catagory2{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+.catagory2 >div{
+    width: 14%;
+    text-align: center;
+    height: 70px;
+    padding:20px;
+}
+
 /* banner2 */
 /* filtered product append is pending for now */
 #banner2{
@@ -116,9 +131,6 @@ ul{
     border:1px solid blue;
     width:90%;
     margin:auto;
-
-
-
 }
 #banner2>img{
 
