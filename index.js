@@ -1,4 +1,4 @@
-import { footer } from "./components/navbar.js";
+import { footer,header,navbar} from "./components/navbar.js";
 
 
 let carousel_div = document.querySelector(".carousal");
@@ -397,3 +397,9 @@ function filterData(data){
   let footer_Part=document.getElementById("footer");
   footer_Part.innerHTML=footer();
   
+
+  let header_part = document.getElementById("header");
+  header_part.innerHTML = header();
+
+  let navbar_part = document.getElementById("navbar");
+  navbar_part.innerHTML = navbar();
