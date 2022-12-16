@@ -76,6 +76,8 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    position: sticky;
+    top:0px
 }
 .cart{
     display: flex;
@@ -90,6 +92,7 @@
     padding: 20px; 
     font-weight: bolder;
 }
+
 #navbar .cart{
     background-color: rgb(198, 49, 99);
 }
@@ -111,16 +114,16 @@
 .nav ul li a:hover{
    background-color: rgb(176, 44, 88);
 }
-.nav >ul:hover > .sub-m {
+.nav >ul >li:nth-child(1):hover #sub-m {
     display:block;
     position: absolute;
     top: 15.1rem;
-    background-color: aqua;
+    
    
 }
-.sub-m{
+#sub-m{
    display: none;
-   position: absolute;
+   /* position: absolute; */
    background-color: white;
 }
 .sub-m ul li:hover{
@@ -130,20 +133,64 @@
 #sub-skin{
    display: none;
 }
+.nav >ul >li:nth-child(2):hover #sub-skin{
+    display:block;
+    position: absolute;
+    top: 15.1rem;
+   
+}
 #sub-hair{
    display: none;
+}
+.nav >ul >li:nth-child(3):hover #sub-hair{
+     display:block;
+    position: absolute;
+    top: 15.1rem;
+     left:7rem
+}
+#sub-personal{
+   display: none;
+}
+.nav >ul >li:nth-child(4):hover #sub-personal{
+    display:block;
+    position: absolute;
+    top: 15.1rem;
+    left:7rem
 }
 #sub-mom{
    display: none;
 }
+.nav >ul >li:nth-child(5):hover #sub-mom{
+    display:block;
+    position: absolute;
+    top: 15.1rem;
+    left:12rem
+}
 #sub-fragrance{
    display: none;
+}
+.nav >ul >li:nth-child(6):hover #sub-fragrance{
+   display:block;
+    position: absolute;
+    top: 15.1rem;
 }
 #sub-ayurveda{
    display: none;
 }
+ .nav >ul >li:nth-child(7):hover #sub-ayurveda{
+   display:block;
+    position: absolute;
+    top: 15.1rem;
+    left:12rem
+}
 #sub-brands{
    display: none;
+}
+.nav >ul >li:nth-child(8):hover #sub-brands{
+     display:block;
+    position: absolute;
+    top: 15.1rem;
+    left:12rem
 }
 .sub-makeup{
    display: flex;
