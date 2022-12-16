@@ -1,5 +1,6 @@
 import { footer } from "./components/navbar.js";
 
+
 let carousel_div = document.querySelector(".carousal");
 
 function carousel(){
