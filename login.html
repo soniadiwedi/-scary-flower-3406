@@ -32,11 +32,11 @@
                 <form action="">
                     <div class="form-group"> 
                         <label for="">Email *</label>
-                        <input type="text" class="form-control" required>
+                        <input type="text" class="form-control" id="email" required>
                     </div>
                     <div class="form-group">
                         <label for="">Password *</label>
-                        <input type="password" class="form-control" required>
+                        <input type="password" class="form-control" id="password" required>
                     </div>
                     <input type="submit" class="btn" value="SIGN IN">
                     <a href="#">Forgot Your Password</a> 
@@ -53,10 +53,33 @@
             <p>Creating an account has many benefits: check out faster, keep more than one address,</p> 
                 <p>track  orders and more.</p>
               
-              <button>CREATE AN ACCOUNT</button>
+             <a href="./signin.html"><button  id="createAnAccount">CREATE AN ACCOUNT</button></a> 
         </div>
 
     
 </div>
 </body>
 </html>
+
+<script>
+    
+    let arr= JSON.parse(localStorage.getItem("login"));
+
+   document.querySelector("form").addEventListener("submit",function(event){
+    event.preventDefault();
+    let email=document.querySelector("#email").value;
+    let password=document.querySelector("#password").value;
+    //console.log("hi")
+    console.log(arr)
+    arr.forEach(el=>{
+        if(email==el.email && password==el.password){
+            alert ("login successful")
+            window.location.href="/index.html";
+            
+        }else{
+            alert("wrong credentials")
+        }
+    })
+   })
+
+</script>
