@@ -319,10 +319,7 @@ ul{
     margin:auto;
     margin-top: 20px;
 }
-/* #carousalCategory>div{
-   border:1px solid green;
-   width:60%;
-} */
+
 .category{
    /* border:1px solid green; */
    width:30%;
@@ -358,6 +355,12 @@ ul{
    text-align: center;
    display: block;
 }
+#carousel1>div>button{
+    background-color: pink;
+    border:0px;
+    margin:10px;
+    padding:20px;
+}
 #images{
    border:1px solid red;
    width:90%;
@@ -389,6 +392,30 @@ ul{
 
 /* banner2 */
 /* filtered product append is pending for now */
+.catagory2>div:hover{
+    border:1px solid yellow;
+    background-color: pink;
+}
+
+#filteredData{
+    border:1px solid red;
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#filteredData > div{
+    border:1px solid blue;
+    text-align: center;
+}
+#filteredData > div>button{
+    padding: 20px;
+    margin: 10px;
+    background-color: pink;
+    border:0px;
+}
+
 #banner2{
 
     border:1px solid blue;

@@ -65,6 +65,7 @@ function footer(){
 }
 
 
+
 function header(){
     return `
     <img src ="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg">
@@ -452,3 +453,9 @@ function navbar(){
     `
 }
 export {footer,header,navbar}
+
+
+
+
+
+
