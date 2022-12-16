@@ -1,0 +1,54 @@
+#container{
+    border:1px solid red;
+    display:flex;
+  }
+  #left_block{
+    border:1px solid yellow;
+    height:350px;
+  }
+  #right_block{
+    border:1px solid green;
+    display:grid;
+    grid-template-columns:repeat(3,400px);
+  }
+  #right_block>div{
+    border:1px solid orange;
+    text-align:center;
+  }
+  #right_block button{
+    padding:10px;
+    margin:10px;
+    background-color:pink;
+    border:0px;
+  }
+
+  #footer{
+    background-color: rgb(40, 39, 39);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+ }
+ #footer-top{
+    display: flex;
+    justify-content: space-evenly;
+ }
+ #footer-bot{
+    display: flex;
+    justify-content: space-around;
+ }
+ #h4{
+    margin-left: 500px;
+ }
+ #input{
+    margin-top: 10px;
+    margin-right: 100px;
+ }
+ #subscribe{
+    height: 30px;
+    width: 250px;
+ }
+ #subs-btn{
+    height: 35px;
+    background-color: rgb(226, 61, 154);
+    border: rgb(226, 61, 154) ;
+    color: aliceblue;
+ }

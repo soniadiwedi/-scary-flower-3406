@@ -8,10 +8,69 @@
    height: 100px;
    margin-left: 100px;
 }
-/* navbar  */
-.nav{
-   display: flex;
+#header >div{
+    display: flex;
+    
 }
+#search{
+   border: 1px solid rgb(160, 157, 157);
+   height: 50px;
+   width: 700px;
+   border-radius: 5px;
+   color: rgb(174, 172, 172);
+   margin-top: 30px;
+   margin-left: 50px;
+}
+#search >select{
+    border: 0;
+    color: rgb(174, 172, 172);
+    font-size: 20px;
+    padding: 10px;
+}
+#search > input{
+    border: 0;
+    color: rgb(174, 172, 172);
+    font-size: 20px;
+    padding: 10px;
+}
+#search > span{
+    color: rgb(174, 172, 172);
+    font-size: 15px;
+    padding: 5px;
+}
+#search > button{
+    background-color:rgb(205, 76, 119) ;
+    border: 0;
+    float: right;
+    height: 50px;
+    width: 50px;
+}
+.fa-magnifying-glass{
+   color: white;
+   padding: 0 5px;
+   
+}
+.landr{
+   margin: 30px;
+   font-size: 20px;
+}
+.landr button {
+   height: 50px;
+   font-size: 25px;
+   border: 1px solid black;
+   background-color: white;
+   border-radius: 3px;
+}
+.landr button i{
+   height: 20px;
+   width: 50px;
+}
+.landr > button:hover{
+   background-color: rgb(205, 76, 119);
+   color: white;
+}
+/* navbar  */
+
 #navbar{
     background-color: rgb(205, 76, 119);
     display: flex;
@@ -34,44 +93,198 @@
 #navbar .cart{
     background-color: rgb(198, 49, 99);
 }
-.nav > div {
-    margin: 20px;
 
+.nav >ul >li{
+   float: left;
 }
-.nav > div > a{
+.nav > ul >li {
+    margin: 20px;
+    
+}
+.nav  ul li a{
     text-decoration: none;
     color: white;
-    font-weight: bolder;
+    padding: 20px 10px;
+    font-weight: bolder; 
 }
+/* hover navbar  */
+.nav ul li a:hover{
+   background-color: rgb(176, 44, 88);
+}
+.nav >ul:hover > .sub-m {
+    display:block;
+    position: absolute;
+    top: 15.1rem;
+    background-color: aqua;
+   
+}
+.sub-m{
+   display: none;
+   position: absolute;
+   background-color: white;
+}
+.sub-m ul li:hover{
+   cursor: pointer;
+   color: rgb(198, 49, 99);
+}
+#sub-skin{
+   display: none;
+}
+#sub-hair{
+   display: none;
+}
+#sub-mom{
+   display: none;
+}
+#sub-fragrance{
+   display: none;
+}
+#sub-ayurveda{
+   display: none;
+}
+#sub-brands{
+   display: none;
+}
+.sub-makeup{
+   display: flex;
+   padding: 20px;
+   justify-content: space-between;
+   background-color: white;
+   width: 700px;
+   border-radius: 5px;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-skin{
+   /* display: none; */
+   display: flex;
+   padding: 20px;
+   justify-content: space-between;
+   background-color: white;
+   width: 1100px;
+   border-radius: 5px;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-hair{
+   /* display: none; */
+   display: flex;
+   padding: 20px;
+   justify-content: space-between;
+   background-color: white;
+   width: 1200px;
+   border-radius: 5px;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-personal{
+   /* display: none; */
+   display: flex;
+   padding: 20px;
+   justify-content: space-between;
+   background-color: white;
+   width: 1100px;
+   border-radius: 5px;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-mom{
+   /* display: none; */
+   display: flex;
+   padding: 20px;
+   justify-content: space-between;
+   background-color: white;
+   width: 1100px;
+   border-radius: 5px;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-fragrance{
+    /* display: none; */
+   display: flex;
+   padding: 20px;
+   justify-content: space-between;
+   background-color: white;
+   width: 300px;
+   border-radius: 5px;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-ayurveda{
+    /* display: none; */
+   display: flex;
+   padding: 20px;
+   justify-content: space-between;
+   background-color: white;
+   width: 1100px;
+   border-radius: 5px;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-brands{
+   /* display: none; */
+   padding: 20px;
+   justify-content: space-between;
+   background-color: white;
+   width: 1000px;
+   border-radius: 5px;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-brands > div{
+   display: grid;
+   grid-template-columns: repeat(6,1fr);
+   gap: 10px;
+   margin-top: 20px;
+}
+.sub-brands > div >div{
+   border: 1px solid rgb(168, 165, 165);
+   padding: 5px;
+   text-align: center;
+}
+ 
+
+
+
 /* category  */
 ul{
     list-style: none;
 }
-
+.category >div{
+   display: flex;
+   margin: 10px;
+}
+.category >div >i{
+   padding: 5px;
+}
+.category >div >h3{
+   font-size: 25px;
+}
+.category > div >ul >li >span{
+   display: flex;
+   
+}
+.category > div >ul >li >span >img{
+   margin-right: 10px;
+}
+.category > div >ul >li{
+   height: 50px;
+   margin: 10px;
+}
 /* carousal  */
 #carousalCategory{
-    border: 1px solid red;
+    border: 1px solid rgb(199, 198, 198);
     height:500px;
     width:90%;
     display:flex;
     margin:auto;
     margin-top: 20px;
 }
-/* #carousalCategory>div{
-   border:1px solid green;
-   width:60%;
-} */
+
 .category{
-   border:1px solid green;
+   /* border:1px solid green; */
    width:30%;
 }
 .carousal{
-   border:1px solid blue;
+   /* border:1px solid blue; */
    width:70%;
 }
 .carousal img{
-   width:100%;
-   height:100%;
+   width:95%;
+   height:90%;
+   padding: 10px;
 }
 #banner{
    border:1px solid red;
@@ -94,6 +307,12 @@ ul{
    border:1px solid green;
    text-align: center;
    display: block;
+}
+#carousel1>div>button{
+    background-color: pink;
+    border:0px;
+    margin:10px;
+    padding:20px;
 }
 #images{
    border:1px solid red;
@@ -126,6 +345,30 @@ ul{
 
 /* banner2 */
 /* filtered product append is pending for now */
+.catagory2>div:hover{
+    border:1px solid yellow;
+    background-color: pink;
+}
+
+#filteredData{
+    border:1px solid red;
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#filteredData > div{
+    border:1px solid blue;
+    text-align: center;
+}
+#filteredData > div>button{
+    padding: 20px;
+    margin: 10px;
+    background-color: pink;
+    border:0px;
+}
+
 #banner2{
 
     border:1px solid blue;
