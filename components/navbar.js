@@ -510,10 +510,11 @@ function navbar(){
   
   <div class="cart">
     <img src="./picture/shopping-cart.png" alt="">
-    <a href="Cart.html">MY CART</a>
+    <a href="/-scary-flower-3406/Cart/Cart.html">MY CART</a>
   </div>
     `;
 }
+
 export {footer,header,navbar,headerInside}
 
 

@@ -48,10 +48,10 @@ let order = document.getElementById("right_block")
 
   display(cartItem)
 
- function display(data){
+ function display(cartItem){
     document.querySelector("#middle_block").innerText="";
    
-    data.forEach((items,i)=>{
+    cartItem.forEach((items,i)=>{
     
         let div1 = document.createElement("div")
 
@@ -72,11 +72,7 @@ let order = document.getElementById("right_block")
             localStorage.setItem("Cart",JSON.stringify(cartItem));           
             display(cartItem);  
 
-        rmv_btn.addEventListener('click',(event)=>{
-          event.preventDefault();
-           data.splice(i,1)             
-            localStorage.setItem("Cart",JSON.stringify(data));
-            display(data);  
+       
 
           //// Total price functionality
      totalPrice = totalPrice - Number(items.price);  
