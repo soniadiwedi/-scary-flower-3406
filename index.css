@@ -5,7 +5,7 @@
 /* header  */
 #header >div >img{
    width: 200px;
-   height: 100px;
+   height: 150px;
    margin-left: 100px;
 }
 #header >div{
@@ -18,7 +18,7 @@
    width: 700px;
    border-radius: 5px;
    color: rgb(174, 172, 172);
-   margin-top: 30px;
+   margin-top: 70px;
    margin-left: 50px;
 }
 #search >select{
@@ -53,6 +53,7 @@
 .landr{
    margin: 30px;
    font-size: 20px;
+   margin-top: 70px;
 }
 .landr button {
    height: 50px;
@@ -65,9 +66,29 @@
    height: 20px;
    width: 50px;
 }
-.landr > button:hover{
+.landr > button:hover,a>button:hover{
    background-color: rgb(205, 76, 119);
    color: white;
+}
+.myaccount{
+   display: none;
+   background-color: white;
+}
+.myaccount > ul >li >a{
+   text-decoration: none;
+   color: black;
+}
+.landr button:hover  .myaccount{
+   display: block;
+   position: absolute;
+   background-color: white;
+   top:12rem;
+   width: 150px;
+   color: black;
+   font-size:25px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   padding: 5px;
+   text-decoration: none;
 }
 /* navbar  */
 
@@ -76,6 +97,7 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    margin-top: 50px;
     position: sticky;
     top:0px
 }
@@ -117,7 +139,7 @@
 .nav >ul >li:nth-child(1):hover #sub-m {
     display:block;
     position: absolute;
-    top: 15.1rem;
+    top: 3.9rem;
     
    
 }
@@ -136,7 +158,7 @@
 .nav >ul >li:nth-child(2):hover #sub-skin{
     display:block;
     position: absolute;
-    top: 15.1rem;
+    top: 3.9rem;
    
 }
 #sub-hair{
@@ -145,7 +167,7 @@
 .nav >ul >li:nth-child(3):hover #sub-hair{
      display:block;
     position: absolute;
-    top: 15.1rem;
+    top: 3.9rem;
      left:7rem
 }
 #sub-personal{
@@ -154,7 +176,7 @@
 .nav >ul >li:nth-child(4):hover #sub-personal{
     display:block;
     position: absolute;
-    top: 15.1rem;
+    top:3.9rem;
     left:7rem
 }
 #sub-mom{
@@ -163,7 +185,7 @@
 .nav >ul >li:nth-child(5):hover #sub-mom{
     display:block;
     position: absolute;
-    top: 15.1rem;
+    top: 3.9rem;
     left:12rem
 }
 #sub-fragrance{
@@ -172,7 +194,7 @@
 .nav >ul >li:nth-child(6):hover #sub-fragrance{
    display:block;
     position: absolute;
-    top: 15.1rem;
+    top: 3.9rem;
 }
 #sub-ayurveda{
    display: none;
@@ -180,7 +202,7 @@
  .nav >ul >li:nth-child(7):hover #sub-ayurveda{
    display:block;
     position: absolute;
-    top: 15.1rem;
+    top: 3.9rem;
     left:12rem
 }
 #sub-brands{
@@ -189,7 +211,7 @@
 .nav >ul >li:nth-child(8):hover #sub-brands{
      display:block;
     position: absolute;
-    top: 15.1rem;
+    top:3.9rem;
     left:12rem
 }
 .sub-makeup{
@@ -299,12 +321,20 @@ ul{
 .category >div >h3{
    font-size: 25px;
 }
-.category > div >ul >li >span{
+.category > div >ul >li >a >span{
    display: flex;
    
 }
-.category > div >ul >li >span >img{
+.category > div >ul >li >a {
+   text-decoration: none;
+   font-size: 20px;
+  
+}
+.category > div >ul >li >a>span >img{
    margin-right: 10px;
+}
+.category > div >ul >li >a>span > p{
+   color: black;
 }
 .category > div >ul >li{
    height: 50px;
@@ -333,8 +363,9 @@ ul{
    height:90%;
    padding: 10px;
 }
+ /* banner */
 #banner{
-   border:1px solid red;
+   /* border:1px solid red; */
    width:90%;
    height:auto;
    margin:auto;
@@ -344,33 +375,42 @@ ul{
 #banner>img{
    width:100%;
 }
+
+/* carousal  */
 #carousel1{
  display:flex;
- border:1px solid red;
+ /* border:1px solid red; */
  width:90%;
  margin:auto;
 }
 #carousel1>div{
-   border:1px solid green;
+   /* border:1px solid green; */
    text-align: center;
+   padding: 10px;
    display: block;
+   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 #carousel1>div>button{
     background-color: pink;
     border:0px;
     margin:10px;
     padding:20px;
+    font-size: 17px;
+    border-radius: 20px;
 }
+
+/* images  */
 #images{
-   border:1px solid red;
+   /* border:1px solid red; */
    width:90%;
+   
    margin: auto;
    display: flex;
    justify-content:space-between;
    margin-top:20px;
 }
 #images>div{
-   border:1px solid green;
+   /* border:1px solid green; */
    width:49%;
 }
 #images>div img{
@@ -390,15 +430,19 @@ ul{
     padding:20px;
 }
 
-/* banner2 */
+
 /* filtered product append is pending for now */
+
+/* category2  */
 .catagory2>div:hover{
-    border:1px solid yellow;
-    background-color: pink;
+    /* border:1px solid yellow; */
+    background-color:  rgb(238, 170, 193);
+    color: rgb(205, 76, 119);
+
 }
 
 #filteredData{
-    border:1px solid red;
+    /* border:1px solid red; */
     width:90%;
     margin:auto;
     display:flex;
@@ -406,19 +450,25 @@ ul{
     margin-bottom: 20px;
 }
 #filteredData > div{
-    border:1px solid blue;
+    /* border:1px solid blue; */
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 #filteredData > div>button{
     padding: 20px;
     margin: 10px;
     background-color: pink;
     border:0px;
+    border-radius: 20px;
+    
 }
 
+
+
+/* banner2 */
 #banner2{
 
-    border:1px solid blue;
+    /* border:1px solid blue; */
     width:90%;
     margin:auto;
 }
@@ -429,7 +479,20 @@ ul{
     
 }
 
-
+/* paragraph  */
+#para{
+   width: 90%;
+   margin: auto;
+}
+#para > h3{
+   font-size: 30px;
+   margin: 20px;
+   color: rgb(97, 96, 96);
+}
+#para > p{
+    margin: 30px;
+    color: rgb(117, 116, 116);
+}
 
 
 
