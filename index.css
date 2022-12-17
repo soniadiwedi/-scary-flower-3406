@@ -379,11 +379,38 @@ ul{
 /* carousal  */
 #carousel1{
  display:flex;
- /* border:1px solid red; */
+
+ border:1px solid white;
+
  width:90%;
  margin:auto;
 }
 #carousel1>div{
+
+   border:1px solid white;
+   text-align: center;
+   /* display: block; */
+   font-size: 20px;
+}
+.carousel1_cart{
+   border:1px solid white;
+   display:flex;
+   width:165px;
+   margin:auto;
+   margin-top:10px;
+   margin-bottom: 10px;
+   justify-content: space-between;
+}
+
+.carousel1_cart>button{
+   padding: 20px;
+   border:0px;
+   background-color: #dd0285;
+   font-weight:bold;
+   color: aliceblue;  
+   cursor: pointer;
+ }
+
    /* border:1px solid green; */
    text-align: center;
    padding: 10px;
@@ -400,6 +427,7 @@ ul{
 }
 
 /* images  */
+
 #images{
    /* border:1px solid red; */
    width:90%;
@@ -435,6 +463,16 @@ ul{
 
 /* category2  */
 .catagory2>div:hover{
+
+    border:1px solid white;
+    background-color: rgb(164, 42, 63);
+    cursor: pointer;
+   text-decoration-color: aliceblue;
+}
+
+#filteredData{
+    border:1px solid white;
+
     /* border:1px solid yellow; */
     background-color:  rgb(238, 170, 193);
     color: rgb(205, 76, 119);
@@ -443,6 +481,7 @@ ul{
 
 #filteredData{
     /* border:1px solid red; */
+
     width:90%;
     margin:auto;
     display:flex;
@@ -450,10 +489,30 @@ ul{
     margin-bottom: 20px;
 }
 #filteredData > div{
-    /* border:1px solid blue; */
+
+    border:1px solid white;
+
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
+
+.mainCart{
+   display:flex;
+   width:165px;
+   margin:auto;
+   margin-top:10px;
+   margin-bottom: 10px;
+   justify-content: space-between;
+   
+}
+.mainCart>button{
+  padding: 20px;
+  border:0px;
+  background-color: #dd0285;
+  font-weight:bold;
+  color: aliceblue;  
+  cursor: pointer;
+
 #filteredData > div>button{
     padding: 20px;
     margin: 10px;
@@ -461,6 +520,7 @@ ul{
     border:0px;
     border-radius: 20px;
     
+
 }
 
 

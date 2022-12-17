@@ -41,40 +41,58 @@ func();
 //<--------CAROUSEL 1----------->
 let i=4;
 let carousel1_div = document.getElementById("carousel1")
-let cart_data = JSON.parse(localStorage.getItem("Cart"))||[];
-function append(data){
-  
+// let cart_data = JSON.parse(localStorage.getItem("Cart"))||[]; 
+// let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[]
+ function append(data){
+  let cart_data = JSON.parse(localStorage.getItem("Cart"))||[]; 
+  let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[];
       let AllData = [data[i],data[i+1],data[i+2],data[i+3]]
    let card1 = document.getElementById("card1");
   let card2 = document.getElementById("card2");
   let card3 = document.getElementById("card3");
   let card4 = document.getElementById("card4");
       card1.innerHTML = `<img src='${data[0].image}'></img>
-                           Name:${data[0].name}<br>
-                           Price:${data[0].price}
-                         <br>  <button class="addToCart">Add to Cart</button>
-                         <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img>`;
+                          <b>Name</b>:${data[0].name.substring(0,40)}...<br>
+                           <b>Price</b>:₹${data[0].price}
+                         <br> <div class="carousel1_cart"> <button class="addToCart">Add to Cart</button>
+                         <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`;
       card2.innerHTML = `<img src="${data[1].image}"></img>
-                            Name:${data[1].name}<br>
-                           Price:${data[1].price}
-                           <br>  <button>Add to Cart</button>
-                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img>`;
+                          <b>Name</b>:${data[1].name.substring(0,40)}...<br>
+                            <b>Price</b>:₹${data[1].price}
+                           <br>  <div class="carousel1_cart"><button>Add to Cart</button>
+                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`;
       card3.innerHTML = `<img src="${data[2].image}"></img>
-                            Name:${data[2].name}<br>
-                           Price:${data[2].price}
-                           <br>  <button>Add to Cart</button>
-                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img>`;
+                             <b>Name</b>:${data[2].name.substring(0,40)}...<br>
+                            <b>Price</b>:₹${data[2].price}
+                           <br> <div class="carousel1_cart"> <button>Add to Cart</button>
+                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`;
       card4.innerHTML = `<img src="${data[3].image}"></img>
-                           Name:${data[3].name}<br>
-                           Price:${data[3].price}
-                           <br>  <button>Add to Cart</button>
-                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img>`;
+                            <b>Name</b>:${data[3].name.substring(0,40)}...<br>
+                           <b>Price</b>:₹${data[3].price}
+                           <br> <div class="carousel1_cart"> <button>Add to Cart</button>
+                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`;
 
 
-                 ////Add to cart functionality 1
+                 ////Add to cart(cart_data) functionality 1
                  
                 let addCart = document.querySelectorAll("#carousel1 button")
                 addCart.forEach((el,index)=>{
+
+                    el.addEventListener('click',()=>{
+                      let cart_data = JSON.parse(localStorage.getItem("Cart"))||[]; 
+                    if(index==0){                        
+                        cart_data.push(data[index])
+            localStorage.setItem("Cart",JSON.stringify(cart_data))  
+                    }else if(index==1){                        
+                        cart_data.push(data[index])
+            localStorage.setItem("Cart",JSON.stringify(cart_data))  
+                    }else if(index==2){                       
+                        cart_data.push(data[index])
+            localStorage.setItem("Cart",JSON.stringify(cart_data))  
+                    }else if(index==3){                        
+                        cart_data.push(data[index])
+            localStorage.setItem("Cart",JSON.stringify(cart_data)) 
+
                     el.addEventListener('click',(event)=>{
                         event.preventDefault()
                     if(index==0){
@@ -89,9 +107,31 @@ function append(data){
                     }else if(index==3){
                         console.log(data[index])  
                         Cart(data[index])
+
                     }
                     })       
                     
+                })
+
+                //// Add to favourite(fav_data) functionality 1
+              let addFavData = document.querySelectorAll(".carousel1_cart>img")
+                addFavData.forEach((el,index)=>{
+                  el.addEventListener('click',()=>{
+                    let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[];
+                if(index==0){                        
+                    fav_data.push(data[index])
+        localStorage.setItem("favCart",JSON.stringify(fav_data))  
+                }else if(index==1){                        
+                  fav_data.push(data[index])
+        localStorage.setItem("favCart",JSON.stringify(fav_data))  
+                }else if(index==2){                       
+                  fav_data.push(data[index])
+        localStorage.setItem("favCart",JSON.stringify(fav_data))  
+                }else if(index==3){                        
+                  fav_data.push(data[index])
+        localStorage.setItem("favCart",JSON.stringify(fav_data)) 
+                }
+                })       
                 })
 
   setInterval(function (){
@@ -101,31 +141,52 @@ function append(data){
     }
   
       card1.innerHTML = `<img src='${data[i].image}'></img>
-                            Name:${data[i].name}<br>
-                           Price:${data[i].price}
-                           <br>  <button>Add to Cart</button>
-                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img>`;
+                           <b>Name</b>:${data[i].name.substring(0,40)}...<br>
+                            <b>Price</b>:₹${data[i].price}
+                           <br> <div class="carousel1_cart"> <button>Add to Cart</button>
+                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`;
       card2.innerHTML = `<img src="${data[i+1].image}"></img>
-                             Name:${data[i+1].name}<br>
-                           Price:${data[i+1].price}
-                           <br>  <button>Add to Cart</button>
-                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img>`;
+                           <b>Name</b>:${data[i+1].name.substring(0,40)}...<br>
+                             <b>Price</b>:₹${data[i+1].price}
+                           <br> <div class="carousel1_cart"> <button>Add to Cart</button>
+                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`;
       card3.innerHTML = `<img src="${data[i+2].image}"></img>
-                            Name:${data[i+2].name}<br>
-                           Price:${data[i+2].price}
-                           <br>  <button>Add to Cart</button>
-                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img>`;
+                           <b>Name</b>:${data[i+2].name.substring(0,40)}...<br>
+                            <b>Price</b>:₹${data[i+2].price}
+                           <br> <div class="carousel1_cart"> <button>Add to Cart</button>
+                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`;
       card4.innerHTML = `<img src="${data[i+3].image}"></img>
-                            Name:${data[i+3].name}<br>
-                           Price:${data[i+3].price}
-                           <br>  <button>Add to Cart</button>
-                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img>`;
+                            <b>Name</b>:${data[i+3].name.substring(0,40)}...<br>
+                            <b>Price</b>:₹${data[i+3].price}
+                           <br> <div class="carousel1_cart"> <button>Add to Cart</button>
+                           <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`;
 
              ////add to cart functionality 2
       
     let addCart = document.querySelectorAll("#carousel1 button")
     addCart.forEach((el,index)=>{
        
+
+      el.addEventListener('click',()=>{
+           // event.preventDefault()
+           let cart_data = JSON.parse(localStorage.getItem("Cart"))||[]; 
+         if(index==0){         
+          
+           cart_data.push(data[index+i-1])
+            localStorage.setItem("Cart",JSON.stringify(cart_data))             
+         }else if(index==1){
+            
+            cart_data.push(data[index+i-1])
+            localStorage.setItem("Cart",JSON.stringify(cart_data))  
+         }else if(index==2){
+            
+            cart_data.push(data[index+i-1])
+            localStorage.setItem("Cart",JSON.stringify(cart_data))   
+         }else if(index==3){
+            
+            cart_data.push(data[index+i-1])
+            localStorage.setItem("Cart",JSON.stringify(cart_data))   
+
       el.addEventListener('click',(event)=>{
             event.preventDefault()
          if(index==0){             
@@ -141,21 +202,39 @@ function append(data){
          }else if(index==3){
             console.log(data[index+i-1])
             Cart(data[index+i-1])
+
          }
-      })
-      
-      
-})
+      }) 
+     })
+                ///// Add data to fav_cart functionality 2
+                let addFavData = document.querySelectorAll(".carousel1_cart>img")
+                addFavData.forEach((el,index)=>{
+                  el.addEventListener('click',()=>{
+                   // event.preventDefault()
+                   let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[];
+                if(index==0){                       
+                    fav_data.push(data[index+i-1])
+                    localStorage.setItem("favCart",JSON.stringify(fav_data))  
+                }else if(index==1){                        
+                  fav_data.push(data[index+i-1])
+                  localStorage.setItem("favCart",JSON.stringify(fav_data))  
+                }else if(index==2){                       
+                  fav_data.push(data[index+i-1])
+                  localStorage.setItem("favCart",JSON.stringify(fav_data))  
+                }else if(index==3){                        
+                  fav_data.push(data[index+i-1])
+                  localStorage.setItem("favCart",JSON.stringify(fav_data)) 
+                }
+                })       
+                })
 
+     i++;
 
-
-    i++;
-  },7000)
+    },7000)
   
-         
 }
 
-console.log(cart_data)
+
 /// If in ADDTOCART id same than gave alert
 
 function Cart(element){
@@ -168,6 +247,9 @@ function Cart(element){
 
 let filter_div = document.getElementById("filteredData")
 function filterData(data){ 
+
+  let cart_data = JSON.parse(localStorage.getItem("Cart"))||[]; 
+  let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[]
   let makeup = document.getElementById("makeup1");
  
     
@@ -178,24 +260,44 @@ function filterData(data){
  filter_div.innerHTML = `<div><img src="${filteredData[0].image}">
                         <p>Name:${filteredData[0].name}</p>
                          <p>Price:${filteredData[0].price}</p>
-                         <button>Add To Cart</button>
-                         <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                          <div class="mainCart"><button>Add To Cart</button>
+                         <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                          <div><img src="${filteredData[1].image}">
                         <p>Name:${filteredData[1].name}</p>
                          <p>Price:${filteredData[1].price}</p>
-                         <button>Add To Cart</button>
-                         <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                         <div class="mainCart"><button>Add To Cart</button>
+                         <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                          <div><img src="${filteredData[2].image}">
                         <p>Name:${filteredData[2].name}</p>
                          <p>Price:${filteredData[2].price}</p>
-                         <button>Add To Cart</button>
-                         <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                         <div class="mainCart"><button>Add To Cart</button>
+                         <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                          <div><img src="${filteredData[3].image}">
                         <p>Name:${filteredData[3].name}</p>
                          <p>Price:${filteredData[3].price}</p>
-                         <button>Add To Cart</button>
-                         <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`
-
+                         <div class="mainCart"><button>Add To Cart</button>
+                         <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>`
+                    // data adding to localStorage(cart_data)
+                    let add_data_to_cart_data = document.querySelectorAll(".mainCart>button")
+                    add_data_to_cart_data.forEach((el,i)=>{
+                     el.addEventListener('click',()=>{ 
+                      let cart_data = JSON.parse(localStorage.getItem("Cart"))||[];                                  
+                       cart_data.push(filteredData[i])
+                  localStorage.setItem("Cart",JSON.stringify(cart_data)) 
+                     })
+                    })
+                    //data adding to localStorage(fav_cart)
+                    let add_data_to_fav_data = document.querySelectorAll(".mainCart>img")
+                    add_data_to_fav_data.forEach((el,i)=>{
+                     el.addEventListener('click',()=>{  
+                                                    
+                        fav_data.push(filteredData[i])
+                    localStorage.setItem("favCart",JSON.stringify(fav_data)) 
+                     })
+                    })
 //<-------For makeup data while clicking------>
    makeup.addEventListener('click',()=>{    
       let filteredData =  data.filter(el => el.category=="Make-up");     
@@ -203,23 +305,44 @@ function filterData(data){
         filter_div.innerHTML = `<div><img src="${filteredData[0].image}">
                               <p>Name:${filteredData[0].name}</p>
                                <p>Price:${filteredData[0].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[1].image}">
                               <p>Name:${filteredData[1].name}</p>
                                <p>Price:${filteredData[1].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[2].image}">
                               <p>Name:${filteredData[2].name}</p>
                                <p>Price:${filteredData[2].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[3].image}">
                               <p>Name:${filteredData[3].name}</p>
                                <p>Price:${filteredData[3].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>`
+           // data adding to localStorage(cart_data)
+                               let add_data_to_cart_data = document.querySelectorAll(".mainCart>button")
+                                 add_data_to_cart_data.forEach((el,i)=>{
+                                  el.addEventListener('click',()=>{
+                                    let cart_data = JSON.parse(localStorage.getItem("Cart"))||[];
+                                    cart_data.push(filteredData[i])
+            localStorage.setItem("Cart",JSON.stringify(cart_data)) 
+                                  })
+                                 })
+           //data adding to localStorage(fav_cart)
+                                 let add_data_to_fav_data = document.querySelectorAll(".mainCart>img")
+                                 add_data_to_fav_data.forEach((el,i)=>{
+                                  el.addEventListener('click',()=>{
+                                    let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[];
+                                     fav_data.push(filteredData[i])
+            localStorage.setItem("favCart",JSON.stringify(fav_data)) 
+                                  })
+                                 })
        })
 //<--------For skin data while click---------->
        let skin = document.getElementById("skin1")
@@ -229,23 +352,45 @@ function filterData(data){
           filter_div.innerHTML = `<div><img src="${filteredData[0].image}">
                               <p>Name:${filteredData[0].name}</p>
                                <p>Price:${filteredData[0].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[1].image}">
                               <p>Name:${filteredData[1].name}</p>
                                <p>Price:${filteredData[1].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[2].image}">
                               <p>Name:${filteredData[2].name}</p>
                                <p>Price:${filteredData[2].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[3].image}">
                               <p>Name:${filteredData[3].name}</p>
                                <p>Price:${filteredData[3].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>`
+
+                                // data adding to localStorage(cart_data)
+                                let add_data_to_cart_data = document.querySelectorAll(".mainCart>button")
+                                add_data_to_cart_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{ 
+                                  let cart_data = JSON.parse(localStorage.getItem("Cart"))||[];                                  
+                                   cart_data.push(filteredData[i])
+           localStorage.setItem("Cart",JSON.stringify(cart_data)) 
+                                 })
+                                })
+          //data adding to localStorage(fav_cart)
+                                let add_data_to_fav_data = document.querySelectorAll(".mainCart>img")
+                                add_data_to_fav_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{ 
+                                  let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[];                                   
+                                    fav_data.push(filteredData[i])
+           localStorage.setItem("favCart",JSON.stringify(fav_data)) 
+                                 })
+                                })
       })
 //<--------For hair data while click---------->      
       let hair = document.getElementById("hair1")
@@ -255,23 +400,45 @@ function filterData(data){
          filter_div.innerHTML = `<div><img src="${filteredData[0].image}">
                               <p>Name:${filteredData[0].name}</p>
                                <p>Price:${filteredData[0].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[1].image}">
                               <p>Name:${filteredData[1].name}</p>
                                <p>Price:${filteredData[1].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[2].image}">
                               <p>Name:${filteredData[2].name}</p>
                                <p>Price:${filteredData[2].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"> <button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[3].image}">
                               <p>Name:${filteredData[3].name}</p>
                                <p>Price:${filteredData[3].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>`
+
+                                // data adding to localStorage(cart_data)
+                                let add_data_to_cart_data = document.querySelectorAll(".mainCart>button")
+                                add_data_to_cart_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{
+                                  let cart_data = JSON.parse(localStorage.getItem("Cart"))||[];
+                                   cart_data.push(filteredData[i])
+           localStorage.setItem("Cart",JSON.stringify(cart_data)) 
+                                 })
+                                })
+          //data adding to localStorage(fav_cart)
+                                let add_data_to_fav_data = document.querySelectorAll(".mainCart>img")
+                                add_data_to_fav_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{
+                                  let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[];
+                                    fav_data.push(filteredData[i])
+           localStorage.setItem("favCart",JSON.stringify(fav_data)) 
+                                 })
+                                })
       })
 
 //<--------For PersonalCare data while click---------->
@@ -282,23 +449,45 @@ function filterData(data){
          filter_div.innerHTML = `<div><img src="${filteredData[0].image}">
                               <p>Name:${filteredData[0].name}</p>
                                <p>Price:${filteredData[0].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[1].image}">
                               <p>Name:${filteredData[1].name}</p>
                                <p>Price:${filteredData[1].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[2].image}">
                               <p>Name:${filteredData[2].name}</p>
                                <p>Price:${filteredData[2].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[3].image}">
                               <p>Name:${filteredData[3].name}</p>
                                <p>Price:${filteredData[3].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>`
+
+                                // data adding to localStorage(cart_data)
+                                let add_data_to_cart_data = document.querySelectorAll(".mainCart>button")
+                                add_data_to_cart_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{
+                                  let cart_data = JSON.parse(localStorage.getItem("Cart"))||[]; 
+                                   cart_data.push(filteredData[i])
+           localStorage.setItem("Cart",JSON.stringify(cart_data)) 
+                                 })
+                                })
+          //data adding to localStorage(fav_cart)
+                                let add_data_to_fav_data = document.querySelectorAll(".mainCart>img")
+                                add_data_to_fav_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{
+                                  let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[];
+                                    fav_data.push(filteredData[i])
+           localStorage.setItem("favCart",JSON.stringify(fav_data)) 
+                                 })
+                                })
       })
 
 //<--------For mom&babyCare data while click---------->      
@@ -309,23 +498,45 @@ function filterData(data){
         filter_div.innerHTML = `<div><img src="${filteredData[0].image}">
                               <p>Name:${filteredData[0].name}</p>
                                <p>Price:${filteredData[0].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[1].image}">
                               <p>Name:${filteredData[1].name}</p>
                                <p>Price:${filteredData[1].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[2].image}">
                               <p>Name:${filteredData[2].name}</p>
                                <p>Price:${filteredData[2].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
+
                                <div><img src="${filteredData[3].image}">
                               <p>Name:${filteredData[3].name}</p>
                                <p>Price:${filteredData[3].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`
+                               <div class="mainCart"> <button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>`
+
+                                // data adding to localStorage(cart_data)
+                                let add_data_to_cart_data = document.querySelectorAll(".mainCart>button")
+                                add_data_to_cart_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{
+                                  let cart_data = JSON.parse(localStorage.getItem("Cart"))||[];
+                                   cart_data.push(filteredData[i])
+           localStorage.setItem("Cart",JSON.stringify(cart_data)) 
+                                 })
+                                })
+          //data adding to localStorage(fav_cart)
+                                let add_data_to_fav_data = document.querySelectorAll(".mainCart>img")
+                                add_data_to_fav_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{
+                                  let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[];
+                                    fav_data.push(filteredData[i])
+           localStorage.setItem("favCart",JSON.stringify(fav_data)) 
+                                 })
+                                })
       })
 
 //<--------For Ayurveda data while click---------->      
@@ -336,23 +547,42 @@ function filterData(data){
          filter_div.innerHTML = `<div><img src="${filteredData[0].image}">
                               <p>Name:${filteredData[0].name}</p>
                                <p>Price:${filteredData[0].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"> <button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
                                <div><img src="${filteredData[1].image}">
                               <p>Name:${filteredData[1].name}</p>
                                <p>Price:${filteredData[1].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
                                <div><img src="${filteredData[2].image}">
                               <p>Name:${filteredData[2].name}</p>
                                <p>Price:${filteredData[2].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
                                <div><img src="${filteredData[3].image}">
                               <p>Name:${filteredData[3].name}</p>
                                <p>Price:${filteredData[3].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`
+                               <div class="mainCart"> <button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>`
+
+                                // data adding to localStorage(cart_data)
+                                let add_data_to_cart_data = document.querySelectorAll(".mainCart>button")
+                                add_data_to_cart_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{
+                                  let cart_data = JSON.parse(localStorage.getItem("Cart"))||[]; 
+                                   cart_data.push(filteredData[i])
+           localStorage.setItem("Cart",JSON.stringify(cart_data)) 
+                                 })
+                                })
+          //data adding to localStorage(fav_cart)
+                                let add_data_to_fav_data = document.querySelectorAll(".mainCart>img")
+                                add_data_to_fav_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{
+                                  let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[];
+                                    fav_data.push(filteredData[i])
+           localStorage.setItem("favCart",JSON.stringify(fav_data)) 
+                                 })
+                                })
       })
 
 //<--------For fregrance data while click---------->      
@@ -363,23 +593,42 @@ function filterData(data){
         filter_div.innerHTML = `<div><img src="${filteredData[0].image}">
                               <p>Name:${filteredData[0].name}</p>
                                <p>Price:${filteredData[0].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"> <button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
                                <div><img src="${filteredData[1].image}">
                               <p>Name:${filteredData[1].name}</p>
                                <p>Price:${filteredData[1].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
                                <div><img src="${filteredData[2].image}">
                               <p>Name:${filteredData[2].name}</p>
                                <p>Price:${filteredData[2].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>
                                <div><img src="${filteredData[3].image}">
                               <p>Name:${filteredData[3].name}</p>
                                <p>Price:${filteredData[3].price}</p>
-                               <button>Add To Cart</button>
-                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div>`
+                               <div class="mainCart"><button>Add To Cart</button>
+                               <img src="https://assets.ajio.com/static/img/wishlistIcon.svg"></img></div></div>`
+
+                                // data adding to localStorage(cart_data)
+                                let add_data_to_cart_data = document.querySelectorAll(".mainCart>button")
+                                add_data_to_cart_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{
+                                  let cart_data = JSON.parse(localStorage.getItem("Cart"))||[];
+                                   cart_data.push(filteredData[i])
+           localStorage.setItem("Cart",JSON.stringify(cart_data)) 
+                                 })
+                                })
+          //data adding to localStorage(fav_cart)
+                                let add_data_to_fav_data = document.querySelectorAll(".mainCart>img")
+                                add_data_to_fav_data.forEach((el,i)=>{
+                                 el.addEventListener('click',()=>{
+                                  let fav_data =  JSON.parse(localStorage.getItem("favCart"))||[];
+                                    fav_data.push(filteredData[i])
+           localStorage.setItem("favCart",JSON.stringify(fav_data)) 
+                                 })
+                                })
       })
 
 
