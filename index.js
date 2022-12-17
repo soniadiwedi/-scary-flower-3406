@@ -79,20 +79,16 @@ function append(data){
                         event.preventDefault()
                     if(index==0){
                         console.log(data[index]) 
-                        cart_data.push(data[index])
-            localStorage.setItem("Cart",JSON.stringify(cart_data))  
+                        Cart(data[index])
                     }else if(index==1){
                         console.log(data[index]) 
-                        cart_data.push(data[index])
-            localStorage.setItem("Cart",JSON.stringify(cart_data))  
+                        Cart(data[index])  
                     }else if(index==2){
                         console.log(data[index]) 
-                        cart_data.push(data[index])
-            localStorage.setItem("Cart",JSON.stringify(cart_data))  
+                        Cart(data[index]) 
                     }else if(index==3){
                         console.log(data[index])  
-                        cart_data.push(data[index])
-            localStorage.setItem("Cart",JSON.stringify(cart_data)) 
+                        Cart(data[index])
                     }
                     })       
                     
@@ -134,20 +130,17 @@ function append(data){
             event.preventDefault()
          if(index==0){             
            console.log(data[index+i-1]) 
-           cart_data.push(data[index+i-1])
-            localStorage.setItem("Cart",JSON.stringify(cart_data))             
+           Cart(data[index+i-1])
+                       
          }else if(index==1){
             console.log(data[index+i-1]) 
-            cart_data.push(data[index+i-1])
-            localStorage.setItem("Cart",JSON.stringify(cart_data))  
+            Cart(data[index+i-1])
          }else if(index==2){
             console.log(data[index+i-1])
-            cart_data.push(data[index+i-1])
-            localStorage.setItem("Cart",JSON.stringify(cart_data))   
+            Cart(data[index+i-1])
          }else if(index==3){
             console.log(data[index+i-1])
-            cart_data.push(data[index+i-1])
-            localStorage.setItem("Cart",JSON.stringify(cart_data))   
+            Cart(data[index+i-1])
          }
       })
       
@@ -165,7 +158,11 @@ function append(data){
 console.log(cart_data)
 /// If in ADDTOCART id same than gave alert
 
-
+function Cart(element){
+  let cart_data = JSON.parse(localStorage.getItem("Cart"))||[];
+  cart_data.push(element)
+  localStorage.setItem("Cart",JSON.stringify(cart_data));
+}
 
 //<-----------FILTERED DATA APPENDING ON MAIN PAGE------------->
 

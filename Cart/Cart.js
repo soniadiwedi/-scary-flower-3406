@@ -48,11 +48,10 @@ let order = document.getElementById("right_block")
 
   display(cartItem)
 
- function display(cartItem){
-    let cartAppend =document.querySelector("#middle_block")
-
-    cartAppend.innerHTML = "";
-    cartItem.forEach((items,i)=>{
+ function display(data){
+    document.querySelector("#middle_block").innerText="";
+   
+    data.forEach((items,i)=>{
     
         let div1 = document.createElement("div")
 
@@ -67,10 +66,11 @@ let order = document.getElementById("right_block")
     ////Remove funcionality start
         let rmv_btn = document.createElement("button");
         rmv_btn.innerText = "Remove Item";
-        rmv_btn.addEventListener('click',()=>{
-            cartItem.splice(i,1)             
-            localStorage.setItem("Cart",JSON.stringify(cartItem));
-            display(cartItem);  
+        rmv_btn.addEventListener('click',(event)=>{
+          event.preventDefault();
+           data.splice(i,1)             
+            localStorage.setItem("Cart",JSON.stringify(data));
+            display(data);  
           //// Total price functionality
      totalPrice = totalPrice - Number(items.price);  
         
@@ -79,12 +79,7 @@ let order = document.getElementById("right_block")
     ////Remove functionality end
 
     div1.append(image,name,price,rmv_btn)
-    cartAppend.append(div1);
-
-
-     
-
-
+    document.querySelector("#middle_block").append(div1);
     })
 
 }
