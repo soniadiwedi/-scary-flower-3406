@@ -26,5 +26,6 @@ function filteredMakeupData(data){
   })
 }
 
+
 let Footer_part = document.getElementById("footer")
 Footer_part.innerHTML=footer()
