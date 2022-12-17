@@ -26,19 +26,6 @@ function filteredMakeupData(data){
   })
 }
 
-// SORT FUNCTIONALITY..............
-let pop=document.querySelector("#sort_price");
-pop.addEventListener("change",function(){
- let selected=document.querySelector("#sort_price").value;
- if(selected=="High"){
-   data.sort((a,b)=>b.price-a.price);
- }
- if(selected=="Low"){
-   data.sort((a,b)=>b.price-a.price);
- }
- filteredMakeupData(data);
-});
-
 let Footer_part = document.getElementById("footer")
 Footer_part.innerHTML=footer()
 
