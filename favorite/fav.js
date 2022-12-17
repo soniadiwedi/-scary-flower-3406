@@ -2,7 +2,7 @@ import { footer } from "../components/navbar.js";
 
 
 
-let cartItem = JSON.parse(localStorage.getItem("Cart"));
+let cartItem = JSON.parse(localStorage.getItem("fav_data"));
 
   let totalPrice=0;
 for(let el of cartItem){
@@ -11,7 +11,7 @@ for(let el of cartItem){
 let order = document.getElementById("right_block")
   order.innerHTML = `<h2>Total Price = <b>₹${totalPrice}</b></h2>`
 
-  display(cartItem)
+  display(fav_data)
 
  function display(data){
     document.querySelector("#middle_block").innerText="";
@@ -29,13 +29,10 @@ let order = document.getElementById("right_block")
         let price = document.createElement("p");
         price.innerHTML = `Price:₹${items.price}`;
     ////Remove funcionality start
-        let rmv_btn = document.createElement("button");
-        rmv_btn.innerText = "Remove Item";
-        rmv_btn.addEventListener('click',(event)=>{
-          event.preventDefault();
-           data.splice(i,1)             
-            localStorage.setItem("Cart",JSON.stringify(data));
-            display(data);  
+        let add_cart = document.createElement("button");
+        add_cart.innerText = "Remove Item";
+        add_cart.addEventListener('click',()=>{      
+           addCart(items);
           //// Total price functionality
      totalPrice = totalPrice - Number(items.price);  
         
@@ -43,12 +40,16 @@ let order = document.getElementById("right_block")
         })
     ////Remove functionality end
 
-    div1.append(image,name,price,rmv_btn)
+    div1.append(image,name,price,add_cart)
     document.querySelector("#middle_block").append(div1);
     })
 
 }
 
+function addCart(items){
+  cartItem.push(items)
+  localStorage.setItem("Cart",JSON.stringify(cartItem));
+}
 
 
 
@@ -56,4 +57,3 @@ let order = document.getElementById("right_block")
   let footer_Part = document.getElementById("footer")
   
   footer_Part.innerHTML = footer()
-
