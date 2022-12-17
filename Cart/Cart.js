@@ -33,8 +33,8 @@ let order = document.getElementById("right_block")
         let rmv_btn = document.createElement("button");
         rmv_btn.innerText = "Remove Item";
         rmv_btn.addEventListener('click',()=>{
-            cartItem.splice(i,1)             
-            localStorage.setItem("Cart",JSON.stringify(cartItem));
+            cartItem.splice(i,1)           
+            localStorage.setItem("Cart",JSON.stringify(cartItem));           
             display(cartItem);  
           //// Total price functionality
      totalPrice = totalPrice - Number(items.price);  

@@ -299,21 +299,34 @@ ul{
 }
 #carousel1{
  display:flex;
- border:1px solid red;
+ border:1px solid white;
  width:90%;
  margin:auto;
 }
 #carousel1>div{
-   border:1px solid green;
+   border:1px solid white;
    text-align: center;
-   display: block;
+   /* display: block; */
+   font-size: 20px;
 }
-#carousel1>div>button{
-    background-color: pink;
-    border:0px;
-    margin:10px;
-    padding:20px;
+.carousel1_cart{
+   border:1px solid white;
+   display:flex;
+   width:165px;
+   margin:auto;
+   margin-top:10px;
+   margin-bottom: 10px;
+   justify-content: space-between;
 }
+
+.carousel1_cart>button{
+   padding: 20px;
+   border:0px;
+   background-color: #dd0285;
+   font-weight:bold;
+   color: aliceblue;  
+   cursor: pointer;
+ }
 #images{
    border:1px solid red;
    width:90%;
@@ -346,12 +359,14 @@ ul{
 /* banner2 */
 /* filtered product append is pending for now */
 .catagory2>div:hover{
-    border:1px solid yellow;
-    background-color: pink;
+    border:1px solid white;
+    background-color: rgb(164, 42, 63);
+    cursor: pointer;
+   text-decoration-color: aliceblue;
 }
 
 #filteredData{
-    border:1px solid red;
+    border:1px solid white;
     width:90%;
     margin:auto;
     display:flex;
@@ -359,14 +374,25 @@ ul{
     margin-bottom: 20px;
 }
 #filteredData > div{
-    border:1px solid blue;
+    border:1px solid white;
     text-align: center;
 }
-#filteredData > div>button{
-    padding: 20px;
-    margin: 10px;
-    background-color: pink;
-    border:0px;
+.mainCart{
+   display:flex;
+   width:165px;
+   margin:auto;
+   margin-top:10px;
+   margin-bottom: 10px;
+   justify-content: space-between;
+   
+}
+.mainCart>button{
+  padding: 20px;
+  border:0px;
+  background-color: #dd0285;
+  font-weight:bold;
+  color: aliceblue;  
+  cursor: pointer;
 }
 
 #banner2{
