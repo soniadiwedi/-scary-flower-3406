@@ -99,9 +99,71 @@ function header(){
               <button type="submit" title="search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         <div class="landr">
-          <button><i class="fa-solid fa-heart"></i></button>
-          <button><i class="fa-solid fa-user"></i></button>
+          <a href="fav.html"><button><i class="fa-solid fa-heart"></i></button></a>
+          <button><i class="fa-solid fa-user"></i>
+              <div class="myaccount">
+                <ul>
+                 <li><a href="login.html">Login</a></li>
+                 <hr>
+                 <li><a href="signin.html">Register</a></li>
+                </ul>
+              </div>
+          </button>
           <span>My Account</span>
+          <a href="admin.html"><button><i class="fa-solid fa-house"></i></button></a>
+          
+        </div>
+        </div>
+    `;
+}
+
+
+function headerInside() {
+  return `
+    <img src ="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg">
+        <div>
+           <img src="">
+           <div id="search">
+              <select>
+                <option value="">All Categories</option>
+                <option value="">--Makeup</option>
+                <option value="">---Face</option>
+                <option value="">----Fondation</option>
+                <option value="">----Blush</option>
+                <option value="">----Face Primer</option>
+                <option value="">----Contour</option>
+                <option value="">----BB Cream</option>
+                <option value="">----Makeup Kit</option>
+                <option value="">----CC Cream</option>
+                <option value="">--Eye</option>
+                <option value="">-----Eye Shadow</option>
+                <option value="">----False Eyelashes</option>
+                <option value="">----Mascara</option>
+                <option value="">----Kajal</option>
+                <option value="">-----Eye Primer</option>
+                <option value="">----Eye-Palettes</option>
+                <option value="">----Eye Kit</option>
+                <option value="">--Lip</option>
+                <option value="">----Lipstick</option>
+              </select>
+              <span>|</span>
+              <input placeholder="Enter your search....">
+              <button type="submit" title="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="landr">
+          <a href="fav.html"><button><i class="fa-solid fa-heart"></i></button></a>
+          <button><i class="fa-solid fa-user"></i>
+              <div class="myaccount">
+                <ul>
+                 <li><a href="login.html">Login</a></li>
+                 <hr>
+                 <li><a href="signin.html">Register</a></li>
+                </ul>
+              </div>
+          </button>
+          <span>My Account</span>
+          <a href="admin.html"><button><i class="fa-solid fa-house"></i></button></a>
+          
         </div>
         </div>
     `;
@@ -109,7 +171,7 @@ function header(){
 
 
 function navbar(){
-    return`
+    return `
     <div class="nav">
     <ul>
         <li><a href="#">MAKEUP</a> 
@@ -448,11 +510,11 @@ function navbar(){
   
   <div class="cart">
     <img src="./picture/shopping-cart.png" alt="">
-    <a href="">MY CART</a>
+    <a href="Cart.html">MY CART</a>
   </div>
-    `
+    `;
 }
-export {footer,header,navbar}
+export {footer,header,navbar,headerInside}
 
 
 
