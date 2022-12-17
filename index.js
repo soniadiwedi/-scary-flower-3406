@@ -1,4 +1,4 @@
-import { footer } from "./components/navbar.js";
+import { footer,navbar } from "./components/navbar.js";
 
 
 let carousel_div = document.querySelector(".carousal");
