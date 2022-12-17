@@ -164,6 +164,7 @@ let carousel1_div = document.getElementById("carousel1")
              ////add to cart functionality 2
       
     let addCart = document.querySelectorAll("#carousel1 button")
+     
     addCart.forEach((el,index)=>{
        
 
