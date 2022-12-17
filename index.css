@@ -321,12 +321,20 @@ ul{
 .category >div >h3{
    font-size: 25px;
 }
-.category > div >ul >li >span{
+.category > div >ul >li >a >span{
    display: flex;
    
 }
-.category > div >ul >li >span >img{
+.category > div >ul >li >a {
+   text-decoration: none;
+   font-size: 20px;
+  
+}
+.category > div >ul >li >a>span >img{
    margin-right: 10px;
+}
+.category > div >ul >li >a>span > p{
+   color: black;
 }
 .category > div >ul >li{
    height: 50px;
@@ -355,8 +363,9 @@ ul{
    height:90%;
    padding: 10px;
 }
+ /* banner */
 #banner{
-   border:1px solid red;
+   /* border:1px solid red; */
    width:90%;
    height:auto;
    margin:auto;
@@ -366,33 +375,42 @@ ul{
 #banner>img{
    width:100%;
 }
+
+/* carousal  */
 #carousel1{
  display:flex;
- border:1px solid red;
+ /* border:1px solid red; */
  width:90%;
  margin:auto;
 }
 #carousel1>div{
-   border:1px solid green;
+   /* border:1px solid green; */
    text-align: center;
+   padding: 10px;
    display: block;
+   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 #carousel1>div>button{
     background-color: pink;
     border:0px;
     margin:10px;
     padding:20px;
+    font-size: 17px;
+    border-radius: 20px;
 }
+
+/* images  */
 #images{
-   border:1px solid red;
+   /* border:1px solid red; */
    width:90%;
+   
    margin: auto;
    display: flex;
    justify-content:space-between;
    margin-top:20px;
 }
 #images>div{
-   border:1px solid green;
+   /* border:1px solid green; */
    width:49%;
 }
 #images>div img{
@@ -412,15 +430,19 @@ ul{
     padding:20px;
 }
 
-/* banner2 */
+
 /* filtered product append is pending for now */
+
+/* category2  */
 .catagory2>div:hover{
-    border:1px solid yellow;
-    background-color: pink;
+    /* border:1px solid yellow; */
+    background-color:  rgb(238, 170, 193);
+    color: rgb(205, 76, 119);
+
 }
 
 #filteredData{
-    border:1px solid red;
+    /* border:1px solid red; */
     width:90%;
     margin:auto;
     display:flex;
@@ -428,19 +450,25 @@ ul{
     margin-bottom: 20px;
 }
 #filteredData > div{
-    border:1px solid blue;
+    /* border:1px solid blue; */
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 #filteredData > div>button{
     padding: 20px;
     margin: 10px;
     background-color: pink;
     border:0px;
+    border-radius: 20px;
+    
 }
 
+
+
+/* banner2 */
 #banner2{
 
-    border:1px solid blue;
+    /* border:1px solid blue; */
     width:90%;
     margin:auto;
 }

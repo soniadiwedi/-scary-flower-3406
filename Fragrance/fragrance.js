@@ -1,4 +1,4 @@
-import { footer,navbar,header } from "../components/navbar.js";
+import { footer,navbar,headerInside } from "../components/navbar.js";
 
 async function func(){
     let res = await fetch(`https://6398167e77359127a046d08d.mockapi.io/products`)
@@ -30,7 +30,7 @@ let Footer_part = document.getElementById("footer")
 Footer_part.innerHTML=footer()
 
 let header_part = document.getElementById("header");
-header_part.innerHTML = header();
+header_part.innerHTML = headerInside();
 
 let navbar_part = document.getElementById("navbar");
 navbar_part.innerHTML = navbar();

@@ -122,7 +122,7 @@ function headerInside() {
   return `
     <img src ="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg">
         <div>
-           <img src="">
+           <img src="/-scary-flower-3406/picture/Glam Goddess.png">
            <div id="search">
               <select>
                 <option value="">All Categories</option>

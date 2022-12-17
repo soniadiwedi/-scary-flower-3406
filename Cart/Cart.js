@@ -1,4 +1,4 @@
-import { footer,navbar,header } from "../components/navbar.js";
+import { footer,navbar,headerInside } from "../components/navbar.js";
 
 
 
@@ -63,7 +63,7 @@ let order = document.getElementById("right_block")
   footer_Part.innerHTML = footer()
 
   let header_part = document.getElementById("header");
-  header_part.innerHTML = header();
+  header_part.innerHTML = headerInside();
 
   let navbar_part = document.getElementById("navbar");
   navbar_part.innerHTML = navbar();
