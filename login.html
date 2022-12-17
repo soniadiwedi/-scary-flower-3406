@@ -61,9 +61,10 @@
 </body>
 </html>
 
-<script>
+<script type="module" src="login.js">
     
-    let arr= JSON.parse(localStorage.getItem("login"));
+//     let arr= JSON.parse(localStorage.getItem("login"));
+
 
    document.querySelector("form").addEventListener("submit",function(event){
     event.preventDefault();
@@ -81,5 +82,6 @@
         }
     })
    })
+
 
 </script>
