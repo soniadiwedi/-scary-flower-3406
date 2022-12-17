@@ -1,4 +1,4 @@
-import { footer } from "./components/navbar.js";
+import { footer,header,navbar} from "./components/navbar.js";
 
 
 let carousel_div = document.querySelector(".carousal");
@@ -77,6 +77,7 @@ let carousel1_div = document.getElementById("carousel1")
                  
                 let addCart = document.querySelectorAll("#carousel1 button")
                 addCart.forEach((el,index)=>{
+
                     el.addEventListener('click',()=>{
                       let cart_data = JSON.parse(localStorage.getItem("Cart"))||[]; 
                     if(index==0){                        
@@ -91,6 +92,22 @@ let carousel1_div = document.getElementById("carousel1")
                     }else if(index==3){                        
                         cart_data.push(data[index])
             localStorage.setItem("Cart",JSON.stringify(cart_data)) 
+
+                    el.addEventListener('click',(event)=>{
+                        event.preventDefault()
+                    if(index==0){
+                        console.log(data[index]) 
+                        Cart(data[index])
+                    }else if(index==1){
+                        console.log(data[index]) 
+                        Cart(data[index])  
+                    }else if(index==2){
+                        console.log(data[index]) 
+                        Cart(data[index]) 
+                    }else if(index==3){
+                        console.log(data[index])  
+                        Cart(data[index])
+
                     }
                     })       
                     
@@ -149,6 +166,7 @@ let carousel1_div = document.getElementById("carousel1")
     let addCart = document.querySelectorAll("#carousel1 button")
     addCart.forEach((el,index)=>{
        
+
       el.addEventListener('click',()=>{
            // event.preventDefault()
            let cart_data = JSON.parse(localStorage.getItem("Cart"))||[]; 
@@ -168,6 +186,23 @@ let carousel1_div = document.getElementById("carousel1")
             
             cart_data.push(data[index+i-1])
             localStorage.setItem("Cart",JSON.stringify(cart_data))   
+
+      el.addEventListener('click',(event)=>{
+            event.preventDefault()
+         if(index==0){             
+           console.log(data[index+i-1]) 
+           Cart(data[index+i-1])
+                       
+         }else if(index==1){
+            console.log(data[index+i-1]) 
+            Cart(data[index+i-1])
+         }else if(index==2){
+            console.log(data[index+i-1])
+            Cart(data[index+i-1])
+         }else if(index==3){
+            console.log(data[index+i-1])
+            Cart(data[index+i-1])
+
          }
       }) 
      })
@@ -202,7 +237,11 @@ let carousel1_div = document.getElementById("carousel1")
 
 /// If in ADDTOCART id same than gave alert
 
-
+function Cart(element){
+  let cart_data = JSON.parse(localStorage.getItem("Cart"))||[];
+  cart_data.push(element)
+  localStorage.setItem("Cart",JSON.stringify(cart_data));
+}
 
 //<-----------FILTERED DATA APPENDING ON MAIN PAGE------------->
 
@@ -604,3 +643,9 @@ function filterData(data){
   let footer_Part=document.getElementById("footer");
   footer_Part.innerHTML=footer();
   
+
+  let header_part = document.getElementById("header");
+  header_part.innerHTML = header();
+
+  let navbar_part = document.getElementById("navbar");
+  navbar_part.innerHTML = navbar();
