@@ -9,7 +9,42 @@ for(let el of cartItem){
     totalPrice += Number(el.price)
 }
 let order = document.getElementById("right_block")
-  order.innerHTML = `<h2>Total Price = <b>₹${totalPrice}</b></h2>`
+  order.innerHTML = `  <h2>SUMMARY</h2>
+  <form action="">
+      <input type="text" class="tax" id="" placeholder="ESTIMATE SHIPPING AND TAX">
+      <div class="input">
+          <label for="" class="label">Country :</label>
+          <select name="country" class="select" >
+              <option value="India">India</option>
+              <option value="United States">United States</option>
+              <option value="Africa">Africa</option>
+              <option value="China">China</option>
+          </select>
+      </div>
+       <div id="state" class="input">
+          <label for=" " class="label">State :</label>
+          <select name="State" class="select" id="">
+          <option value="AN">Andaman and Nikobar Islands</option>
+          <option value="AP">Andhra Pradesh</option>
+          <option value="ARP">Arunachal Pradesh</option>
+          <option value="Aa">Assam</option>
+          <option value="Br">Bihar</option>
+          <option value="Ch">Chandigarh</option>
+          <option value="Chh">Chhattisgarh</option>
+          <option value="Br">Bihar</option>
+          <option value="Dl">Delhi</option>
+          <option value="DN">Daman & Diu</option>
+          <option value="Goa">Goa</option>
+          <option value="GJ">Gujarat</option>
+          <option value="HR">Hryana</option>
+          <option value="HP">Himachal Pradesh</option>
+      </select>
+       </div>  
+       <h4>Total Price = <b>₹${totalPrice}</b></h4> 
+       <input type="submit" class="btn" value="PROCEED TO CHECKOUT">
+  </form>
+  
+  `
 
   display(cartItem)
 
