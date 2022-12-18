@@ -2,8 +2,15 @@
     margin: 0;
     padding: 0;
 }
-/* header  */
-#header >div >img{
+
+
+
+ 
+
+
+ /* header  */
+
+ #header >div >img{
    width: 200px;
    height: 150px;
    margin-left: 100px;
@@ -90,6 +97,7 @@
    padding: 5px;
    text-decoration: none;
 }
+
 /* navbar  */
 
 #navbar{
@@ -99,8 +107,7 @@
     width: 100%;
     margin-top: 50px;
     position: sticky;
-    top:0px;
-    margin-bottom:20px;
+    top:0px
 }
 .cart{
     display: flex;
@@ -122,6 +129,7 @@
 
 .nav >ul >li{
    float: left;
+   list-style-type: none;
 }
 .nav > ul >li {
     margin: 20px;
@@ -137,11 +145,34 @@
 .nav ul li a:hover{
    background-color: rgb(176, 44, 88);
 }
+.sub-makeup >div >ul >li{
+   list-style-type: none;
+}
+.sub-skin > div > ul >li{
+   list-style-type: none;
+}
+.sub-hair > div >ul >li{
+   list-style-type: none;
+}
+.sub-personal >div >ul >li{
+    list-style-type: none;
+}
+.sub-mom >div >ul >li{
+    list-style-type: none;
+}
+.sub-fragrance >ul >li{
+   list-style-type: none;
+}
+.sub-ayurveda  >div >ul >li{
+   list-style-type: none;
+}
 .sub-makeup >div >ul >li:hover{
    color: #dd0285;
+   list-style-type: none;
 }
 .sub-skin > div > ul >li:hover{
    color: #dd0285;
+   
 }
 .sub-hair > div >ul >li:hover{
    color: #dd0285;
@@ -165,6 +196,8 @@
     display:block;
     position: absolute;
     top: 3.9rem;
+    
+   
 }
 #sub-m{
    display: none;
@@ -326,267 +359,36 @@
    padding: 5px;
    text-align: center;
 }
- 
-
-
-
-/* category  */
-ul{
-    list-style: none;
-}
-.category >div{
-   display: flex;
-   margin: 10px;
-}
-.category >div >i{
-   padding: 5px;
-}
-.category >div >h3{
-   font-size: 25px;
-}
-.category > div >ul >li >a >span{
-   display: flex;
-   
-}
-.category > div >ul >li >a {
-   text-decoration: none;
-   font-size: 20px;
-  
-}
-.category > div >ul >li >a>span >img{
-   margin-right: 10px;
-}
-.category > div >ul >li >a>span > p{
-   color: black;
-}
-.category > div >ul >li{
-   height: 50px;
-   margin: 10px;
-}
-/* carousal  */
-#carousalCategory{
-    border: 1px solid rgb(199, 198, 198);
-    height:500px;
-    width:90%;
-    display:flex;
-    margin:auto;
-    margin-top: 20px;
-}
-
-.category{
-   /* border:1px solid green; */
-   width:30%;
-}
-.carousal{
-   /* border:1px solid blue; */
-   width:70%;
-}
-.carousal img{
-   width:95%;
-   height:90%;
-   padding: 10px;
-}
- /* banner */
-#banner{
-   /* border:1px solid red; */
-   width:90%;
-   height:auto;
-   margin:auto;
-   margin-top: 20px;
-   margin-bottom: 20px;
-}
-#banner>img{
-   width:100%;
-}
-
-/* carousal  */
-#carousel1{
- display:flex;
- box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
- border:1px solid white;
- width:90%;
- margin:auto;
-}
-
-#carousel1 > div{
-   border:1px solid white;
-   text-align: center;
-   /* display: block; */
-   font-size: 20px;
-   padding: 10px;
-}
-.carousel1_cart{
-   border:1px solid white;
-   display:flex;
-   width:165px;
-   margin:auto;
-   margin-top:10px;
-   margin-bottom: 10px;
-   justify-content: space-between;
-}
-
-.carousel1_cart>button{
-   padding: 20px;
-   border-radius: 5px;
-   border:0px;
-   width: 120px;
-   background-color: #dd0285;
-   font-weight:bold;
-   color: aliceblue;  
-   cursor: pointer;
- }
-.carousal1 >div{
-   /* border:1px solid green; */
-   text-align: center;
-   padding: 10px;
-   font-size: 10px;
-   font-weight: lighter;
-   display: block;
-   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-}
-#carousel1>div>button{
-    background-color: pink;
-    border:0px;
-    margin:10px;
-    padding:20px;
-    font-size: 17px;
-    border-radius: 20px;
-}
-
-/* images  */
-
-#images{
-   /* border:1px solid red; */
-   width:90%;
-   
-   margin: auto;
-   display: flex;
-   justify-content:space-between;
-   margin-top:20px;
-}
-#images>div{
-   /* border:1px solid green; */
-   width:49%;
-}
-#images>div img{
-   width:100%;
-}
-
-/* category card  */
-.catagory2{
-    display: flex;
-    width: 90%;
-    margin: auto;
-}
-.catagory2 >div{
-    width: 14%;
-    text-align: center;
-    height: 70px;
-    padding:20px;
-}
-
-
-/* filtered product append is pending for now */
-
-/* category2  */
-.catagory2>div:hover{
-    color:  rgb(205, 76, 119);
-    border:1px solid white;
-    background-color:  rgb(244, 203, 217);
-    cursor: pointer;
-   text-decoration-color: aliceblue;
-}
-
-#filteredData{
-    border:1px solid white;
-    color: rgb(108, 108, 108);
-
-}
-
-#filteredData{
+/* container  */
+#container{
     /* border:1px solid red; */
-
-    width:90%;
-    margin:auto;
     display:flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-#filteredData > div{
-
-    border:1px solid white;
-    padding: 10px;
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-}
-
-.mainCart{
-   display:flex;
-   width:165px;
-   margin:auto;
-   margin-top:10px;
-   margin-bottom: 10px;
-   justify-content: space-between;
-   
-}
-.mainCart>button{
-  padding: 20px;
-  border:0px;
-  background-color: #dd0285;
-  font-weight:bold;
-  color: aliceblue;  
-  cursor: pointer;
-  border-radius: 5px;
-}
-#filteredData > div>button{
-    padding: 20px;
-    margin: 10px;
-    background-color: pink;
+  }
+  #left_block{
+    /* border:1px solid yellow; */
+    height:350px;
+  }
+  #right_block{
+    /* border:1px solid green; */
+    display:grid;
+    grid-template-columns:repeat(3,350px);
+    gap: 20px;
+  }
+  #right_block>div{
+    /* border:1px solid orange; */
+    text-align:center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  }
+  #right_block button{
+    padding:10px;
+    margin:10px;
+    background-color:rgb(205, 76, 119);
     border:0px;
-    border-radius: 20px;
-    
+    color: white;
+    border-radius: 2px;
+  }
 
-}
-
-
-
-/* banner2 */
-#banner2{
-
-    /* border:1px solid blue; */
-    width:90%;
-    margin:auto;
-}
-#banner2>img{
-
-    width:100%;
-    /* margin for filtered products */
-    
-}
-
-/* paragraph  */
-#para{
-   width: 90%;
-   margin: auto;
-}
-#para > h3{
-   font-size: 30px;
-   margin: 20px;
-   color: rgb(97, 96, 96);
-}
-#para > p{
-    margin: 30px;
-    color: rgb(117, 116, 116);
-}
-
-
-
-
-
-
-
-
-/* footer CSS*/
+ /* footer CSS*/
 #footer{
    background-color: rgb(40, 39, 39);
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -627,4 +429,3 @@ ul{
    color: aliceblue;
    font-weight: bolder;
 }
-

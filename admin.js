@@ -42,10 +42,10 @@ async function addProduct(obj) {
       }
     );
     if (productDetails.ok) {
-      alert("Data appended");
+      alert("Data Appended");
     }
   } catch (error) {
-    alert("Bad request");
+    alert("Bad Request");
   }
 }
 

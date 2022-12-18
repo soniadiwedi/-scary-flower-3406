@@ -14,14 +14,16 @@
     padding-left: 20px;
 
 }
+
 #tableSection{
     border: 1px solid teal;
     margin: auto;
     width: 60%;
     height: 500px;
     /* overflow: scroll; */
+    }
 
-}
+
 .inputLabel{
     width: 80%;
     margin: auto;
@@ -38,20 +40,36 @@
 h2{
     text-align: center;
 }
+
 table,th,td{
     border:1px solid black;
-}
-table{
-    border: 1px solid red;
-    width: 100%;
+    }
 
+/* table  */
+
+table{
+    /* border: 1px solid red; */
+    width: 700px;
 }
+table ,th ,td{
+    /* white-space: nowrap; */
+    width: 300px;
+    height: 70px;
+    border: 2px solid green;
+}
+
+thead{
+    height: 50px;
+    font-size: 30px;
+    width: 200px;
+
 #tableSection table  thead{
     height:50px;
     width: 200px;
     font-size: 30px;
     /* width: auto;  */
     background-color: rgb(228, 130, 130);
+
 }
 tbody{
     height: auto;
