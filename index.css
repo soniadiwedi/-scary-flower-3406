@@ -408,22 +408,17 @@ ul{
  margin:auto;
 }
 
-<<<<<<< HEAD
+
 #carousel1>div{
    border:1px solid white;
    text-align: center;
    /* display: block; */
    
    font-size: 20px;   
-   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-=======
-#carousel1 > div{
-   border:1px solid white;
-   text-align: center;
-   /* display: block; */
-   font-size: 20px;
+   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;  
+   
    padding: 10px;
->>>>>>> fe7347e1bcee3d32c34091c0749028fcc9754a6d
+
 }
 
 .carousel1_cart{
@@ -446,10 +441,10 @@ ul{
    color: aliceblue;  
    cursor: pointer;
  }
-<<<<<<< HEAD
+
 
   
-=======
+
 .carousal1 >div{
    /* border:1px solid green; */
    text-align: center;
@@ -459,7 +454,7 @@ ul{
    display: block;
    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
->>>>>>> fe7347e1bcee3d32c34091c0749028fcc9754a6d
+
 #carousel1>div>button{
     background-color: pink;
     border:0px;
@@ -508,25 +503,20 @@ ul{
 .catagory2>div:hover{
     color:  rgb(205, 76, 119);
     border:1px solid white;
-<<<<<<< HEAD
-    background-color: pink;
-=======
+
     background-color:  rgb(244, 203, 217);
->>>>>>> fe7347e1bcee3d32c34091c0749028fcc9754a6d
+
     cursor: pointer;
    text-decoration-color: aliceblue;
 }
 
 #filteredData{
     border:1px solid white;
-<<<<<<< HEAD
 
     /* border:1px solid yellow; */
     /* background-color:  rgb(238, 170, 193); */
-    color: rgb(205, 76, 119);
-=======
-    color: rgb(108, 108, 108);
->>>>>>> fe7347e1bcee3d32c34091c0749028fcc9754a6d
+    color: rgb(205, 76, 119); 
+
 
 }
 
@@ -563,13 +553,9 @@ ul{
   font-weight:bold;
   color: aliceblue;  
   cursor: pointer;
-<<<<<<< HEAD
+
 }
 
-=======
-  border-radius: 5px;
-}
->>>>>>> fe7347e1bcee3d32c34091c0749028fcc9754a6d
 #filteredData > div>button{
     padding: 20px;
     margin: 10px;

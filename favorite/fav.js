@@ -4,14 +4,10 @@ import { footer,navbar,headerInside } from "../components/navbar.js";
 //window.location.reload()
 let favData = JSON.parse(localStorage.getItem("favCart"));
 
-<<<<<<< HEAD
+
  console.log(favData)
   display(favData)
-=======
-let fav_data = JSON.parse(localStorage.getItem("favCart"));
-let cartItem = JSON.parse(localStorage.getItem("Cart"));
 
->>>>>>> fe7347e1bcee3d32c34091c0749028fcc9754a6d
 
  function display(favData){
     document.querySelector("#middle_block").innerText="";
