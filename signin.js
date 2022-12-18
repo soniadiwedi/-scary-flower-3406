@@ -1,3 +1,5 @@
+import { footer, header, navbar } from "./components/navbar.js";
+
 let arr = [];
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();
@@ -22,3 +24,12 @@ document.querySelector("form").addEventListener("submit", function (event) {
   localStorage.setItem("login", JSON.stringify(arr));
   window.location.href = "/login.html";
 });
+
+let header_part = document.getElementById("header");
+header_part.innerHTML = header();
+
+let navbar_part = document.getElementById("navbar");
+navbar_part.innerHTML = navbar();
+
+let footer_Part = document.getElementById("footer");
+footer_Part.innerHTML = footer();
