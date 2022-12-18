@@ -76,42 +76,56 @@
 
 
   #right_block>h2{
-   border:1px solid orange;
+   
    width:300px;
    margin-left:70px;
+   margin-bottom: 20px;
  }
     .input>.label{
-   font-size: 18px;
-   margin-left:70px;
+   
+   margin-left:20px;
    margin-top: 10px;
   }
  
   .select{
-   margin-top: 10px;
+   margin-top: 8px;
    margin-bottom: 20px;
-   padding: 10px 10px;
+   outline: none;
+   /* padding: 10px 10px; */
    font-size: 15px;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
-  
-  .tax{
-   padding: 10px 10px;
-   font-size: 16px;   
-   width: 200px;
-   font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  } 
+  #pincode >label{
+    margin-left: 20px;
+    margin-bottom: 20px; 
+  }
+  #pincode input{
+    margin-bottom: 20px;
+    outline: none; 
+    margin-top: 5px;
+  }
+
+  #price span{
+    margin-left: 20px;
+  }
 
   .btn{
-   padding: 5px;
+   padding: 10px;
    border: none;
-   margin:20px;
+   margin:30px;
+   border-radius: 5%;
   }
 
+  
   .btn:hover{
-   background-color: pink;
+    background-color: #cd4c77;
    cursor: pointer;
+   color: white;
   }
 
+  #pr{
+    margin-top: 20px;
+  }
 
 
 
