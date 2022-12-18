@@ -151,7 +151,7 @@ function headerInside() {
               <button type="submit" title="search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         <div class="landr">
-          <a href="fav.html"><button><i class="fa-solid fa-heart"></i></button></a>
+          <a href="/-scary-flower-3406/favorite/fav.html"><button><i class="fa-solid fa-heart"></i></button></a>
           <button><i class="fa-solid fa-user"></i>
               <div class="myaccount">
                 <ul>
@@ -515,7 +515,28 @@ function navbar(){
     `;
 }
 
-export {footer,header,navbar,headerInside}
+
+function allCategory(){
+  return `
+  <div>
+        <i class="fa-solid fa-list"></i>
+        <h3>All Categories</h3></div>
+      <div>
+        <ul>
+          <li><a href="./Makeup/makeup.html"><span><img src="	https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt=""><p>Makeup &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></i></p></span></a></li>
+          <li><a href="./Skin/skin.html"><span><img src="	https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/skin-small.png" alt=""><p>Skin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ></p></span></a></li></li>
+          <li><a href="./Hair/hair.html"><span><img src="	https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/hair-small.png" alt=""><p>Hair &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ></p></span></a></li></li>
+          <li><a href="./personalCare/personalCare.html"><span><img src="	https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/personal-care-small.png" alt=""><p>Personal Care &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ></p></span></a></li></li>
+          <li><a href="./mom&babyCare/babyCare.html"><span><img src="	https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/mom-baby-care-small.png" alt=""><p>Mom & Baby care &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ></p></span></a></li></li>
+          <li><a href="./Fragrance/fragrance.html"><span><img src="	https://www.beautybebo.com/pub/media/fragrance.png" alt=""><p>Fragrance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ></p></span></a></li></li>
+          <li><a href="./Ayurveda/ayurveda.html"><span><img src="	https://www.beautybebo.com/pub/media/ayurveda.png" alt=""><p>Ayurveda &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ></p></span></a></li></li>
+        </ul>
+      </div>
+      </div>
+  `;
+}
+
+export {footer,header,navbar,headerInside,allCategory}
 
 
 

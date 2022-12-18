@@ -1,4 +1,4 @@
-import { footer,navbar,headerInside } from "../components/navbar.js";
+import { footer,navbar,headerInside,allCategory } from "../components/navbar.js";
 
 async function func(){
     let res = await fetch(`https://6398167e77359127a046d08d.mockapi.io/products`)
@@ -15,7 +15,7 @@ function filteredMakeupData(data){
     let image = document.createElement("img")
     image.src = el.image;
     let p = document.createElement("p");
-    p.innerHTML = `Name:${el.name}`
+    p.innerHTML = `Name:${el.name.substring(0,30)}...`
     let p1 =document.createElement("p");
     p1.innerHTML = `Price:${el.price}`
     let btn = document.createElement("button")
@@ -75,3 +75,6 @@ header_part.innerHTML = headerInside();
 
 let navbar_part = document.getElementById("navbar");
 navbar_part.innerHTML = navbar();
+
+let category_part = document.getElementById("left_block");
+category_part.innerHTML = allCategory();
