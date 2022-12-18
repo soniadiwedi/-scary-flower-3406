@@ -1,3 +1,5 @@
+import { footer, header, navbar } from "./components/navbar.js";
+
 let arr = JSON.parse(localStorage.getItem("login"));
 
 document.querySelector("form").addEventListener("submit", function (event) {
@@ -15,3 +17,11 @@ document.querySelector("form").addEventListener("submit", function (event) {
     }
   });
 });
+let header_part = document.getElementById("header");
+header_part.innerHTML = header();
+
+let navbar_part = document.getElementById("navbar");
+navbar_part.innerHTML = navbar();
+
+let footer_Part = document.getElementById("footer");
+footer_Part.innerHTML = footer();
