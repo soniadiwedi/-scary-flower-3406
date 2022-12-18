@@ -68,7 +68,7 @@ function footer(){
 
 function header(){
     return `
-    <img src ="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg">
+    <a href="/-scary-flower-3406/index.html"><img src ="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg"></a>
         <div>
            <img src="./picture/Glam Goddess.png">
            <div id="search">
@@ -99,7 +99,7 @@ function header(){
               <button type="submit" title="search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         <div class="landr">
-          <a href="fav.html"><button><i class="fa-solid fa-heart"></i></button></a>
+          <a href="/-scary-flower-3406/favorite/fav.html"><button><i class="fa-solid fa-heart"></i></button></a>
           <button><i class="fa-solid fa-user"></i>
               <div class="myaccount">
                 <ul>
@@ -122,7 +122,7 @@ function headerInside() {
   return `
     <img src ="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg">
         <div>
-           <img src="/-scary-flower-3406/picture/Glam Goddess.png">
+           <a href="/-scary-flower-3406/index.html"></a><img src="/-scary-flower-3406/picture/Glam Goddess.png"></a>
            <div id="search">
               <select>
                 <option value="">All Categories</option>

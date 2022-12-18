@@ -1,8 +1,8 @@
-import { footer } from "../components/navbar.js";
+import { footer,navbar,headerInside } from "../components/navbar.js";
 
 
 
-let cartItem = JSON.parse(localStorage.getItem("fav_data"));
+let cartItem = JSON.parse(localStorage.getItem("favCart"));
 
   let totalPrice=0;
 for(let el of cartItem){
@@ -51,7 +51,11 @@ function addCart(items){
   localStorage.setItem("Cart",JSON.stringify(cartItem));
 }
 
+let header_part = document.getElementById("header");
+header_part.innerHTML = headerInside();
 
+let navbar_part = document.getElementById("navbar");
+navbar_part.innerHTML = navbar();
 
 
   let footer_Part = document.getElementById("footer")

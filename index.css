@@ -99,7 +99,8 @@
     width: 100%;
     margin-top: 50px;
     position: sticky;
-    top:0px
+    top:0px;
+    margin-bottom:20px;
 }
 .cart{
     display: flex;
@@ -136,12 +137,34 @@
 .nav ul li a:hover{
    background-color: rgb(176, 44, 88);
 }
+.sub-makeup >div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-skin > div > ul >li:hover{
+   color: #dd0285;
+}
+.sub-hair > div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-personal >div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-mom >div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-fragrance >ul >li:hover{
+   color: #dd0285;
+}
+.sub-ayurveda  >div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-brands  >div :hover{
+  background-color: rgb(212, 233, 240);
+}
 .nav >ul >li:nth-child(1):hover #sub-m {
     display:block;
     position: absolute;
     top: 3.9rem;
-    
-   
 }
 #sub-m{
    display: none;
@@ -379,18 +402,18 @@ ul{
 /* carousal  */
 #carousel1{
  display:flex;
-
+ box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
  border:1px solid white;
-
  width:90%;
  margin:auto;
 }
-#carousel1>div{
 
+#carousel1 > div{
    border:1px solid white;
    text-align: center;
    /* display: block; */
    font-size: 20px;
+   padding: 10px;
 }
 .carousel1_cart{
    border:1px solid white;
@@ -404,16 +427,20 @@ ul{
 
 .carousel1_cart>button{
    padding: 20px;
+   border-radius: 5px;
    border:0px;
+   width: 120px;
    background-color: #dd0285;
    font-weight:bold;
    color: aliceblue;  
    cursor: pointer;
  }
-
+.carousal1 >div{
    /* border:1px solid green; */
    text-align: center;
    padding: 10px;
+   font-size: 10px;
+   font-weight: lighter;
    display: block;
    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
@@ -463,19 +490,16 @@ ul{
 
 /* category2  */
 .catagory2>div:hover{
-
+    color:  rgb(205, 76, 119);
     border:1px solid white;
-    background-color: rgb(164, 42, 63);
+    background-color:  rgb(244, 203, 217);
     cursor: pointer;
    text-decoration-color: aliceblue;
 }
 
 #filteredData{
     border:1px solid white;
-
-    /* border:1px solid yellow; */
-    background-color:  rgb(238, 170, 193);
-    color: rgb(205, 76, 119);
+    color: rgb(108, 108, 108);
 
 }
 
@@ -491,7 +515,7 @@ ul{
 #filteredData > div{
 
     border:1px solid white;
-
+    padding: 10px;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
@@ -512,7 +536,8 @@ ul{
   font-weight:bold;
   color: aliceblue;  
   cursor: pointer;
-
+  border-radius: 5px;
+}
 #filteredData > div>button{
     padding: 20px;
     margin: 10px;
@@ -566,30 +591,40 @@ ul{
    background-color: rgb(40, 39, 39);
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    color: white;
+   padding: 20px;
+   margin-top: 20px;
 }
 #footer-top{
    display: flex;
    justify-content: space-evenly;
 }
+#footer-top >div {
+   padding: 20px;
+}
 #footer-bot{
    display: flex;
-   justify-content: space-around;
+   justify-content:space-evenly;
 }
 #h4{
    margin-left: 500px;
+   margin: 5px;
 }
 #input{
    margin-top: 10px;
    margin-right: 100px;
+   display: flex;
 }
 #subscribe{
-   height: 30px;
+   height: 40px;
    width: 250px;
+
 }
 #subs-btn{
-   height: 35px;
+   height: 44px;
+   width: 100px;
    background-color: rgb(226, 61, 154);
    border: rgb(226, 61, 154) ;
    color: aliceblue;
+   font-weight: bolder;
 }
 
