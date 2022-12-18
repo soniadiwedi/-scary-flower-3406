@@ -18,7 +18,8 @@
     border: 1px solid teal;
     margin: auto;
     width: 60%;
-    height: 800px;
+    height: 500px;
+    /* overflow: scroll; */
 
 }
 .inputLabel{
@@ -36,6 +37,9 @@
 }
 h2{
     text-align: center;
+}
+table,th,td{
+    border:1px solid black;
 }
 table{
     border: 1px solid red;
@@ -59,33 +63,31 @@ thead th {
     width: 100px;
     /* border: 1px solid pink; */
 }
-/* tbody> tr>th :nth-child(1) {
-    height: auto;
-    width: 20%;
-    border: 1px solid pink;
+.td5{
+    background-color: rgb(215, 25, 57);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    
 }
-tbody> tr>th :nth-child(2) {
-    height: auto;
-    width: 10%;
-    border: 1px solid pink;
+
+#itemEditModel{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    width: 60%;
+    height: 200px;
+    margin: auto;
+    border:1px solid red ;
+    background-color: aquamarine;
 }
-tbody> tr>th :nth-child(3) {
-    height: auto;
+#displayModel{
+    width: 100px;
+    margin: auto;
+    padding: 10px;
+    
+    align-items: center;
+}
+#pagebtn{
     width: 30%;
-    border: 1px solid pink;
-}
-tbody> tr>th :nth-child(4) {
-    height: auto;
-    width: 20%;
-    border: 1px solid pink;
-}
-tbody> tr>th :nth-child(5) {
-    height: auto;
-    width: 20%;
-    border: 1px solid pink;
-} */
-.td3{
-    color: red;
-    width: 50px !important;
-    overflow:scroll;
+    margin: auto;
 }

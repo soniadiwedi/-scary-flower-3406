@@ -8,6 +8,29 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="itemEditModel">
+      <div id="itemEditModelContent">
+        <form>
+          <label class="modelLebel">Edit Prodct Name</label>
+          <br />
+          <input id="name" class="modelInput" type="text" value="" />
+          <br />
+          <label class="modelLebel">Edit Prodct Price</label>
+          <br />
+          <input id="price" class="modelInput" type="number" value="" />
+          <br />
+          <label class="modelLebel">Edit Prodct ImgURL</label>
+          <br />
+          <input id="imgUrl" class="modelInput" type="text" value="" />
+          <br />
+          <label class="modelLebel">ID</label>
+          <br />
+          <input id="id" class="modelInput" type="text" value="" />
+          <br />
+          <input id="editProduct" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
     <div id="mainContainer">
       <div id="formSection">
         <h2>Add Products</h2>
@@ -64,25 +87,39 @@
         </form>
         <hr class="hrTag" />
         <h2>Item limit per Page</h2>
-        <select class="inputLabel" id="itemPerPage">
+        <select
+          onchange="paginateProduct(1)"
+          class="inputLabel"
+          id="itemPerPage"
+        >
           <option value="10">10</option>
           <option value="15">15</option>
           <option value="20">20</option>
           <option value="25">25</option>
         </select>
       </div>
+
       <div id="tableSection">
         <h2>Product detials Table</h2>
+
         <table>
           <thead>
             <th>Name</th>
             <th>Price</th>
-            <th style="width: 100px">Image</th>
+            <th>Image</th>
             <th>Category</th>
             <th>Edit</th>
+            <th>Delete</th>
           </thead>
           <tbody></tbody>
         </table>
+        <div id="pagebtn">
+          <button onclick="paginateProduct(1)">page 1</button>
+          <button onclick="paginateProduct(2)">page 2</button>
+          <button onclick="paginateProduct(3)">page 3</button>
+          <button onclick="paginateProduct(4)">page 4</button>
+          <button onclick="paginateProduct(5)">page 5</button>
+        </div>
       </div>
     </div>
   </body>
