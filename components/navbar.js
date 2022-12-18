@@ -151,7 +151,7 @@ function headerInside() {
               <button type="submit" title="search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         <div class="landr">
-          <a href="fav.html"><button><i class="fa-solid fa-heart"></i></button></a>
+          <a href="/-scary-flower-3406/favorite/fav.html"><button><i class="fa-solid fa-heart"></i></button></a>
           <button><i class="fa-solid fa-user"></i>
               <div class="myaccount">
                 <ul>
