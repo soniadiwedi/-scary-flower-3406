@@ -385,13 +385,16 @@ ul{
  width:90%;
  margin:auto;
 }
-#carousel1>div{
 
+#carousel1>div{
    border:1px solid white;
    text-align: center;
    /* display: block; */
-   font-size: 20px;
+   
+   font-size: 20px;   
+   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
+
 .carousel1_cart{
    border:1px solid white;
    display:flex;
@@ -411,12 +414,7 @@ ul{
    cursor: pointer;
  }
 
-   /* border:1px solid green; */
-   text-align: center;
-   padding: 10px;
-   display: block;
-   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-}
+  
 #carousel1>div>button{
     background-color: pink;
     border:0px;
@@ -465,7 +463,7 @@ ul{
 .catagory2>div:hover{
 
     border:1px solid white;
-    background-color: rgb(164, 42, 63);
+    background-color: pink;
     cursor: pointer;
    text-decoration-color: aliceblue;
 }
@@ -474,7 +472,7 @@ ul{
     border:1px solid white;
 
     /* border:1px solid yellow; */
-    background-color:  rgb(238, 170, 193);
+    /* background-color:  rgb(238, 170, 193); */
     color: rgb(205, 76, 119);
 
 }
@@ -512,15 +510,14 @@ ul{
   font-weight:bold;
   color: aliceblue;  
   cursor: pointer;
+}
 
 #filteredData > div>button{
     padding: 20px;
     margin: 10px;
     background-color: pink;
     border:0px;
-    border-radius: 20px;
-    
-
+    border-radius: 20px;   
 }
 
 

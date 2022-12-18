@@ -15,7 +15,7 @@ function filteredMakeupData(data){
     let image = document.createElement("img")
     image.src = el.image;
     let p = document.createElement("p");
-    p.innerHTML = `Name:${el.name}`
+    p.innerHTML = `Name:${el.name.substring(0,30)}...`
     let p1 =document.createElement("p");
     p1.innerHTML = `Price:${el.price}`
     let btn = document.createElement("button")

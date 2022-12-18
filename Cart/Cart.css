@@ -44,14 +44,25 @@
  #middle_block{
    display:grid;
    grid-template-columns: repeat(3,300px);
+   gap:10px;
 
  }
  #middle_block>div{
-   border:1px solid blue;
+   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+   text-align: center;   
+ }
+ #middle_block>div>button{
+   padding: 10px;
+   margin:10px;
+   background-color: #cd4c77;
+   border:0px;
+   color:white;
+   font-weight:bold;
  }
  #right_block{
    border:4px solid orange;
    width:300px;
+   
  }
 
  /* ----------------------------------- */
@@ -62,9 +73,19 @@
    margin-bottom: 20px;
    line-height: 30px;
   } */
+
+
+  #right_block>h2{
+   border:1px solid orange;
+   width:300px;
+   margin-left:70px;
+ }
     .input>.label{
    font-size: 18px;
+   margin-left:70px;
+   margin-top: 10px;
   }
+ 
   .select{
    margin-top: 10px;
    margin-bottom: 20px;
@@ -75,8 +96,7 @@
   
   .tax{
    padding: 10px 10px;
-   font-size: 16px;
-   
+   font-size: 16px;   
    width: 200px;
    font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   } 
@@ -84,10 +104,356 @@
   .btn{
    padding: 5px;
    border: none;
-   
+   margin:20px;
   }
 
   .btn:hover{
    background-color: pink;
    cursor: pointer;
   }
+
+
+
+
+
+
+  
+  *{
+   margin: 0;
+   padding: 0;
+}
+/* header  */
+#header >div >img{
+  width: 200px;
+  height: 150px;
+  margin-left: 100px;
+}
+#header >div{
+   display: flex;
+   
+}
+#search{
+  border: 1px solid rgb(160, 157, 157);
+  height: 50px;
+  width: 700px;
+  border-radius: 5px;
+  color: rgb(174, 172, 172);
+  margin-top: 70px;
+  margin-left: 50px;
+}
+#search >select{
+   border: 0;
+   color: rgb(174, 172, 172);
+   font-size: 20px;
+   padding: 10px;
+}
+#search > input{
+   border: 0;
+   color: rgb(174, 172, 172);
+   font-size: 20px;
+   padding: 10px;
+}
+#search > span{
+   color: rgb(174, 172, 172);
+   font-size: 15px;
+   padding: 5px;
+}
+#search > button{
+   background-color:rgb(205, 76, 119) ;
+   border: 0;
+   float: right;
+   height: 50px;
+   width: 50px;
+}
+.fa-magnifying-glass{
+  color: white;
+  padding: 0 5px;
+  
+}
+.landr{
+  margin: 30px;
+  font-size: 20px;
+  margin-top: 70px;
+}
+.landr button {
+  height: 50px;
+  font-size: 25px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 3px;
+}
+.landr button i{
+  height: 20px;
+  width: 50px;
+}
+.landr > button:hover,a>button:hover{
+  background-color: rgb(205, 76, 119);
+  color: white;
+}
+.myaccount{
+  display: none;
+  background-color: white;
+}
+.myaccount > ul >li >a{
+  text-decoration: none;
+  color: black;
+}
+.landr button:hover  .myaccount{
+  display: block;
+  position: absolute;
+  background-color: white;
+  top:12rem;
+  width: 150px;
+  color: black;
+  font-size:25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 5px;
+  text-decoration: none;
+}
+/* navbar  */
+
+#navbar{
+   background-color: rgb(205, 76, 119);
+   display: flex;
+   justify-content: space-evenly;
+   width: 100%;
+   margin-top: 50px;
+   position: sticky;
+   top:0px
+}
+.cart{
+   display: flex;
+}
+.cart > img{
+   height: 40px;
+   padding: 10px;
+}
+.cart > a{
+   color: white;
+   text-decoration: none;
+   padding: 20px; 
+   font-weight: bolder;
+}
+
+#navbar .cart{
+   background-color: rgb(198, 49, 99);
+}
+
+.nav >ul >li{
+  float: left;
+}
+.nav > ul >li {
+   margin: 20px;
+   
+}
+.nav  ul li a{
+   text-decoration: none;
+   color: white;
+   padding: 20px 10px;
+   font-weight: bolder; 
+}
+/* hover navbar  */
+.nav ul li a:hover{
+  background-color: rgb(176, 44, 88);
+}
+.nav >ul >li:nth-child(1):hover #sub-m {
+   display:block;
+   position: absolute;
+   top: 3.9rem;
+   
+  
+}
+#sub-m{
+  display: none;
+  /* position: absolute; */
+  background-color: white;
+}
+.sub-m ul li:hover{
+  cursor: pointer;
+  color: rgb(198, 49, 99);
+}
+#sub-skin{
+  display: none;
+}
+.nav >ul >li:nth-child(2):hover #sub-skin{
+   display:block;
+   position: absolute;
+   top: 3.9rem;
+  
+}
+#sub-hair{
+  display: none;
+}
+.nav >ul >li:nth-child(3):hover #sub-hair{
+    display:block;
+   position: absolute;
+   top: 3.9rem;
+    left:7rem
+}
+#sub-personal{
+  display: none;
+}
+.nav >ul >li:nth-child(4):hover #sub-personal{
+   display:block;
+   position: absolute;
+   top:3.9rem;
+   left:7rem
+}
+#sub-mom{
+  display: none;
+}
+.nav >ul >li:nth-child(5):hover #sub-mom{
+   display:block;
+   position: absolute;
+   top: 3.9rem;
+   left:12rem
+}
+#sub-fragrance{
+  display: none;
+}
+.nav >ul >li:nth-child(6):hover #sub-fragrance{
+  display:block;
+   position: absolute;
+   top: 3.9rem;
+}
+#sub-ayurveda{
+  display: none;
+}
+.nav >ul >li:nth-child(7):hover #sub-ayurveda{
+  display:block;
+   position: absolute;
+   top: 3.9rem;
+   left:12rem
+}
+#sub-brands{
+  display: none;
+}
+.nav >ul >li:nth-child(8):hover #sub-brands{
+    display:block;
+   position: absolute;
+   top:3.9rem;
+   left:12rem
+}
+.sub-makeup{
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: white;
+  width: 700px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-skin{
+  /* display: none; */
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: white;
+  width: 1100px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-hair{
+  /* display: none; */
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: white;
+  width: 1200px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-personal{
+  /* display: none; */
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: white;
+  width: 1100px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-mom{
+  /* display: none; */
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: white;
+  width: 1100px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-fragrance{
+   /* display: none; */
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: white;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-ayurveda{
+   /* display: none; */
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: white;
+  width: 1100px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-brands{
+  /* display: none; */
+  padding: 20px;
+  justify-content: space-between;
+  background-color: white;
+  width: 1000px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sub-brands > div{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+.sub-brands > div >div{
+  border: 1px solid rgb(168, 165, 165);
+  padding: 5px;
+  text-align: center;
+}
+
+/* category  */
+ul{
+ list-style: none;
+}
+.category >div{
+display: flex;
+margin: 10px;
+}
+.category >div >i{
+padding: 5px;
+}
+.category >div >h3{
+font-size: 25px;
+}
+.category > div >ul >li >a >span{
+display: flex;
+
+}
+.category > div >ul >li >a {
+text-decoration: none;
+font-size: 20px;
+
+}
+.category > div >ul >li >a>span >img{
+margin-right: 10px;
+}
+.category > div >ul >li >a>span > p{
+color: black;
+}
+.category > div >ul >li{
+height: 50px;
+margin: 10px;
+}
