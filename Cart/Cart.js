@@ -1,4 +1,4 @@
-import { footer,navbar,headerInside } from "../components/navbar.js";
+import { footer,navbar,headerInside,header } from "../components/navbar.js";
 
 
 
