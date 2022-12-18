@@ -2,7 +2,7 @@ import { footer } from "../components/navbar.js";
 
 
 
-let cartItem = JSON.parse(localStorage.getItem("fav_data"));
+let fav_data = JSON.parse(localStorage.getItem("favCart"));
 
   let totalPrice=0;
 for(let el of cartItem){
@@ -13,10 +13,10 @@ let order = document.getElementById("right_block")
 
   display(fav_data)
 
- function display(data){
+ function display(fav_data){
     document.querySelector("#middle_block").innerText="";
    
-    data.forEach((items,i)=>{
+    fav_data.forEach((items,i)=>{
     
         let div1 = document.createElement("div")
 
