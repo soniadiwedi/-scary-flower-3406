@@ -1,26 +1,75 @@
+  /* css for main container */
 #mainContainer{
     display: flex;
-    border: 1px solid red;
+    
     width: 90%;
     margin: auto;
-    height: 900px;
+    height: auto;
 
 }
+
+  /* css for form dection for data update form */
 #formSection{
-    border: 1px solid teal;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: auto;
     width: 30%;
     height: 800px;
     padding-left: 20px;
+    background-color: rgb(223, 202, 206);
 
 }
 
+
+  /* css for table section for displaying table */
 #tableSection{
-    border: 1px solid teal;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: auto;
     width: 60%;
     height: 500px;
+    background-color: rgb(187, 180, 181);
     /* overflow: scroll; */
+    }
+    table,th,td{
+        border:1px solid black;
+        background-color: rgb(187, 180, 181);
+        }
+    
+    /* table  */
+    
+    table{
+        /* border: 1px solid red; */
+        width: 700px;
+    }
+    table ,th ,td{
+        /* white-space: nowrap; */
+        width: 300px;
+        height: 70px;
+        /* border: 2px solid green; */
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    
+    thead{
+        height: 50px;
+        font-size: 30px;
+        width: 200px;
+    }
+    #tableSection table  thead{
+        height:50px;
+        width: 200px;
+        font-size: 30px;
+        /* width: auto;  */
+        background-color: rgb(228, 130, 130);
+    
+    }
+    tbody{
+        height: auto;
+        /* width: 100%; */
+        
+    }
+    thead th {
+        height:50px;
+        width: 100px;
+        /* border: 1px solid pink; */
     }
 
 
@@ -38,49 +87,15 @@
     
 }
 h2{
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
-}
-
-table,th,td{
-    border:1px solid black;
-    }
-
-/* table  */
-
-table{
-    /* border: 1px solid red; */
-    width: 700px;
-}
-table ,th ,td{
-    /* white-space: nowrap; */
-    width: 300px;
-    height: 70px;
-    border: 2px solid green;
-}
-
-thead{
-    height: 50px;
-    font-size: 30px;
-    width: 200px;
-
-#tableSection table  thead{
-    height:50px;
-    width: 200px;
-    font-size: 30px;
-    /* width: auto;  */
-    background-color: rgb(228, 130, 130);
-
-}
-tbody{
-    height: auto;
-    /* width: 100%; */
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     
 }
-thead th {
-    height:50px;
-    width: 100px;
-    /* border: 1px solid pink; */
-}
+
+
 .td5{
     background-color: rgb(215, 25, 57);
     padding: 10px;
@@ -88,24 +103,53 @@ thead th {
     border-radius: 5px;
     
 }
-
+ /* css for edit item box */
 #itemEditModel{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    width: 60%;
-    height: 200px;
-    margin: auto;
-    border:1px solid red ;
-    background-color: aquamarine;
+    width: 40%;
+    height: 500px;
+    margin-top: 30px;
+    margin-left: 20%;
+    
+    background-color: rgb(232, 179, 188);
 }
-#displayModel{
-    width: 100px;
+#itemEditModelContent form input{
+    width: 80%;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+#itemEditModelContent form label{
+    width: 80%;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+#editProduct{
+    background-color: #dd0285;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.td5modelInput{
+    width: 80%;
+    font-size: 20px;
+}
+
+
+#pagebtn{
+    width: 70%;
     margin: auto;
+    
     padding: 10px;
     
-    align-items: center;
+    
 }
-#pagebtn{
-    width: 30%;
-    margin: auto;
+#pagebtn button{
+  background-color: #dd0285;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 15%;
 }
+

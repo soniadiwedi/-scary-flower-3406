@@ -65,6 +65,13 @@ function createTable(arr) {
     let edit_btn = document.createElement("button");
 
     edit_btn.innerText = "Edit";
+    edit_btn.style.backgroundColor = "#dd0285";
+    edit_btn.style.padding = "5px";
+    edit_btn.style.border = "none";
+    edit_btn.style.borderRadius = "5px";
+    edit_btn.style.marginInlineStart = "10px";
+    edit_btn.style.width = "70%";
+
     edit_btn.addEventListener("click", () => {
       console.log(ele);
       model.style.display = "block";
@@ -79,6 +86,12 @@ function createTable(arr) {
     });
     let delete_btn = document.createElement("button");
     delete_btn.innerText = "Delete";
+    delete_btn.style.backgroundColor = "#dd0285";
+    delete_btn.style.padding = "5px";
+    delete_btn.style.border = "none";
+    delete_btn.style.borderRadius = "5px";
+    delete_btn.style.marginInlineStart = "10px";
+    delete_btn.style.width = "70%";
     delete_btn.addEventListener("click", () => {
       console.log("delete btn got clicked", ele.id);
       deleteProduct(ele.id);
@@ -89,10 +102,12 @@ function createTable(arr) {
 
     td1.innerText = ele.name;
     td2.innerText = ele.price;
+    td2.style.textAlign = "center";
     td3.innerText = ele.image.substring(0, 20);
     //console.log(str.substring(1, 3));
 
     td4.innerText = ele.category;
+    td4.style.textAlign = "center";
     td5.append(edit_btn);
     //td5.setAttribute("class", "td5");
 
