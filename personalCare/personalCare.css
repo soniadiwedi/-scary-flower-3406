@@ -121,6 +121,7 @@
 
 .nav >ul >li{
    float: left;
+   list-style-type: none;
 }
 .nav > ul >li {
     margin: 20px;
@@ -135,6 +136,53 @@
 /* hover navbar  */
 .nav ul li a:hover{
    background-color: rgb(176, 44, 88);
+}
+.sub-makeup >div >ul >li{
+   list-style-type: none;
+}
+.sub-skin > div > ul >li{
+   list-style-type: none;
+}
+.sub-hair > div >ul >li{
+   list-style-type: none;
+}
+.sub-personal >div >ul >li{
+    list-style-type: none;
+}
+.sub-mom >div >ul >li{
+    list-style-type: none;
+}
+.sub-fragrance >ul >li{
+   list-style-type: none;
+}
+.sub-ayurveda  >div >ul >li{
+   list-style-type: none;
+}
+.sub-makeup >div >ul >li:hover{
+   color: #dd0285;
+   list-style-type: none;
+}
+.sub-skin > div > ul >li:hover{
+   color: #dd0285;
+   
+}
+.sub-hair > div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-personal >div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-mom >div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-fragrance >ul >li:hover{
+   color: #dd0285;
+}
+.sub-ayurveda  >div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-brands  >div :hover{
+  background-color: rgb(212, 233, 240);
 }
 .nav >ul >li:nth-child(1):hover #sub-m {
     display:block;
@@ -303,9 +351,9 @@
    padding: 5px;
    text-align: center;
 }
-
+ /* container  */
 #container{
-    border:1px solid red;
+    /* border:1px solid red; */
     display:flex;
   }
   #left_block{
@@ -313,48 +361,65 @@
     height:350px;
   }
   #right_block{
-    border:1px solid green;
+    /* border:1px solid green; */
     display:grid;
-    grid-template-columns:repeat(3,400px);
+    grid-template-columns:repeat(3,350px);
+    gap: 20px;
   }
   #right_block>div{
-    border:1px solid orange;
+    /* border:1px solid orange; */
     text-align:center;
+    
+    
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   }
   #right_block button{
     padding:10px;
     margin:10px;
-    background-color:pink;
+    background-color:rgb(205, 76, 119);
     border:0px;
+    color: white;
+    border-radius: 2px;
   }
 
-  #footer{
-    background-color: rgb(40, 39, 39);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
- }
- #footer-top{
-    display: flex;
-    justify-content: space-evenly;
- }
- #footer-bot{
-    display: flex;
-    justify-content: space-around;
- }
- #h4{
-    margin-left: 500px;
- }
- #input{
-    margin-top: 10px;
-    margin-right: 100px;
- }
- #subscribe{
-    height: 30px;
-    width: 250px;
- }
- #subs-btn{
-    height: 35px;
-    background-color: rgb(226, 61, 154);
-    border: rgb(226, 61, 154) ;
-    color: aliceblue;
- }
+  /* footer CSS*/
+#footer{
+   background-color: rgb(40, 39, 39);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+#footer-top{
+   display: flex;
+   justify-content: space-evenly;
+}
+#footer-top >div {
+   padding: 20px;
+}
+#footer-bot{
+   display: flex;
+   justify-content:space-evenly;
+}
+#h4{
+   margin-left: 500px;
+   margin: 5px;
+}
+#input{
+   margin-top: 10px;
+   margin-right: 100px;
+   display: flex;
+}
+#subscribe{
+   height: 40px;
+   width: 250px;
+
+}
+#subs-btn{
+   height: 44px;
+   width: 100px;
+   background-color: rgb(226, 61, 154);
+   border: rgb(226, 61, 154) ;
+   color: aliceblue;
+   font-weight: bolder;
+}

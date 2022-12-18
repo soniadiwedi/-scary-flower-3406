@@ -68,7 +68,7 @@ function footer(){
 
 function header(){
     return `
-    <img src ="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg">
+    <a href="/-scary-flower-3406/index.html"><img src ="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg"></a>
         <div>
            <img src="./picture/Glam Goddess.png">
            <div id="search">
@@ -122,7 +122,7 @@ function headerInside() {
   return `
     <img src ="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg">
         <div>
-           <img src="/-scary-flower-3406/picture/Glam Goddess.png">
+           <a href="/-scary-flower-3406/index.html"></a><img src="/-scary-flower-3406/picture/Glam Goddess.png"></a>
            <div id="search">
               <select>
                 <option value="">All Categories</option>
