@@ -1,76 +1,102 @@
-  /* css for main container */
+
+
+
+#heading{
+    text-align: center;
+    color: #dd0285;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+} 
+ 
+ /* css for main container */
 #mainContainer{
     display: flex;
+    justify-content: space-between;
     
     width: 90%;
     margin: auto;
     height: auto;
 
 }
+#mainContainer > div{
+    border-radius: 10px;
+}
 
   /* css for form dection for data update form */
 #formSection{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: auto;
+    margin-top: 0px;
     width: 30%;
+    float: left;
     height: 800px;
     padding-left: 20px;
-    background-color: rgb(223, 202, 206);
-
+    background-color: rgb(248, 184, 195);
+    color: #f30293;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
 }
-
-
+#formSection >form >p  >input{
+    border: 0;
+    
+}
+.inputLabel{
+    border: 0;
+}
+#addProductButton{
+    width: 350px;
+    border-radius: 10px;
+    height: 40px;
+    color: #dd0285;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+}
   /* css for table section for displaying table */
 #tableSection{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: auto;
-    width: 60%;
-    height: 500px;
-    background-color: rgb(187, 180, 181);
+    width:60%;
+    color: white;
+    font-family:  'Courier New', Courier, monospace;;
+    background-color:rgb(250, 164, 178) ;
     /* overflow: scroll; */
     }
-    table,th,td{
-        border:1px solid black;
-        background-color: rgb(187, 180, 181);
-        }
+#tableSection > table >thead{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #dd0285;
+    border-radius: 10px;
+    padding: 10px;
+}
+#tableSection >tbody >tr >td {
+    color: #ec68b7;
+}
+ 
+#tableSection >h2{
+    color: white;
+}
+   
     
-    /* table  */
-    
-    table{
+table{
         /* border: 1px solid red; */
         width: 700px;
-    }
-    table ,th ,td{
-        /* white-space: nowrap; */
-        width: 300px;
-        height: 70px;
-        /* border: 2px solid green; */
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin: auto;
     }
     
-    thead{
+    
+thead{
         height: 50px;
         font-size: 30px;
         width: 200px;
     }
-    #tableSection table  thead{
-        height:50px;
-        width: 200px;
-        font-size: 30px;
-        /* width: auto;  */
-        background-color: rgb(228, 130, 130);
-    
-    }
-    tbody{
-        height: auto;
-        /* width: 100%; */
-        
-    }
-    thead th {
+thead th {
         height:50px;
         width: 100px;
         /* border: 1px solid pink; */
     }
+
 
 
 .inputLabel{
@@ -96,58 +122,32 @@ h2{
 }
 
 
-table,th,td{
-    border:1px solid black;
-    }
 
-/* table  */
 
-table{
-    /* border: 1px solid red; */
-    width: 700px;
-}
-table ,th ,td{
-    /* white-space: nowrap; */
-    width: 300px;
-    height: 70px;
-    border: 2px solid green;
-}
 
-thead{
-    height: 50px;
-    font-size: 30px;
-    width: 200px;
-}
-#tableSection table  thead{
-    height:50px;
-    width: 200px;
-    font-size: 30px;
-    /* width: auto;  */
-    background-color: rgb(228, 130, 130);
-}
-
-.td5{
-    background-color: rgb(215, 25, 57);
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    
-}
  /* css for edit item box */
 #itemEditModel{
-    display: none; /* Hidden by default */
+     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     width: 40%;
     height: 500px;
     margin-top: 30px;
     margin-left: 20%;
-    
-    background-color: rgb(232, 179, 188);
+    padding: 20px;
+    padding-left: 50px;
+    background-color: white;
+    color: #dd0285;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 #itemEditModelContent form input{
     width: 80%;
     font-size: 20px;
+    height: 30px;
     margin-bottom: 5px;
+    border: 1px solid palevioletred;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 #itemEditModelContent form label{
     width: 80%;
@@ -155,10 +155,15 @@ thead{
     margin-bottom: 5px;
 }
 #editProduct{
-    background-color: #dd0285;
+    background-color:#dd0285;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
     border: none;
+    height: 50px;
     border-radius: 5px;
     margin-top: 10px;
+    text-align: center;
 }
 
 .td5modelInput{
@@ -166,19 +171,21 @@ thead{
     font-size: 20px;
 }
 
-
+/* pagination  */
 #pagebtn{
-    width: 70%;
+    width: 600px;
     margin: auto;
-    
+    height: 50px;
     padding: 10px;
     
     
 }
 #pagebtn button{
-  background-color: #dd0285;
+  background-color:white5;
   border: none;
-  border-radius: 5px;
+  color :#f30293;
+  font-size: 20px;
+  border-radius: 50%;
   padding: 5px;
   width: 15%;
 }
