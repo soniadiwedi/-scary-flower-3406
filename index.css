@@ -5,7 +5,7 @@
 /* header  */
 #header >div >img{
    width: 200px;
-   height: 100px;
+   height: 150px;
    margin-left: 100px;
 }
 #header >div{
@@ -18,7 +18,7 @@
    width: 700px;
    border-radius: 5px;
    color: rgb(174, 172, 172);
-   margin-top: 30px;
+   margin-top: 70px;
    margin-left: 50px;
 }
 #search >select{
@@ -53,6 +53,7 @@
 .landr{
    margin: 30px;
    font-size: 20px;
+   margin-top: 70px;
 }
 .landr button {
    height: 50px;
@@ -65,9 +66,29 @@
    height: 20px;
    width: 50px;
 }
-.landr > button:hover{
+.landr > button:hover,a>button:hover{
    background-color: rgb(205, 76, 119);
    color: white;
+}
+.myaccount{
+   display: none;
+   background-color: white;
+}
+.myaccount > ul >li >a{
+   text-decoration: none;
+   color: black;
+}
+.landr button:hover  .myaccount{
+   display: block;
+   position: absolute;
+   background-color: white;
+   top:12rem;
+   width: 150px;
+   color: black;
+   font-size:25px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   padding: 5px;
+   text-decoration: none;
 }
 /* navbar  */
 
@@ -76,6 +97,10 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    margin-top: 50px;
+    position: sticky;
+    top:0px;
+    margin-bottom:20px;
 }
 .cart{
     display: flex;
@@ -90,6 +115,7 @@
     padding: 20px; 
     font-weight: bolder;
 }
+
 #navbar .cart{
     background-color: rgb(198, 49, 99);
 }
@@ -111,16 +137,38 @@
 .nav ul li a:hover{
    background-color: rgb(176, 44, 88);
 }
-.nav >ul:hover > .sub-m {
+.sub-makeup >div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-skin > div > ul >li:hover{
+   color: #dd0285;
+}
+.sub-hair > div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-personal >div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-mom >div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-fragrance >ul >li:hover{
+   color: #dd0285;
+}
+.sub-ayurveda  >div >ul >li:hover{
+   color: #dd0285;
+}
+.sub-brands  >div :hover{
+  background-color: rgb(212, 233, 240);
+}
+.nav >ul >li:nth-child(1):hover #sub-m {
     display:block;
     position: absolute;
-    top: 15.1rem;
-    background-color: aqua;
-   
+    top: 3.9rem;
 }
-.sub-m{
+#sub-m{
    display: none;
-   position: absolute;
+   /* position: absolute; */
    background-color: white;
 }
 .sub-m ul li:hover{
@@ -130,20 +178,64 @@
 #sub-skin{
    display: none;
 }
+.nav >ul >li:nth-child(2):hover #sub-skin{
+    display:block;
+    position: absolute;
+    top: 3.9rem;
+   
+}
 #sub-hair{
    display: none;
+}
+.nav >ul >li:nth-child(3):hover #sub-hair{
+     display:block;
+    position: absolute;
+    top: 3.9rem;
+     left:7rem
+}
+#sub-personal{
+   display: none;
+}
+.nav >ul >li:nth-child(4):hover #sub-personal{
+    display:block;
+    position: absolute;
+    top:3.9rem;
+    left:7rem
 }
 #sub-mom{
    display: none;
 }
+.nav >ul >li:nth-child(5):hover #sub-mom{
+    display:block;
+    position: absolute;
+    top: 3.9rem;
+    left:12rem
+}
 #sub-fragrance{
    display: none;
+}
+.nav >ul >li:nth-child(6):hover #sub-fragrance{
+   display:block;
+    position: absolute;
+    top: 3.9rem;
 }
 #sub-ayurveda{
    display: none;
 }
+ .nav >ul >li:nth-child(7):hover #sub-ayurveda{
+   display:block;
+    position: absolute;
+    top: 3.9rem;
+    left:12rem
+}
 #sub-brands{
    display: none;
+}
+.nav >ul >li:nth-child(8):hover #sub-brands{
+     display:block;
+    position: absolute;
+    top:3.9rem;
+    left:12rem
 }
 .sub-makeup{
    display: flex;
@@ -252,12 +344,20 @@ ul{
 .category >div >h3{
    font-size: 25px;
 }
-.category > div >ul >li >span{
+.category > div >ul >li >a >span{
    display: flex;
    
 }
-.category > div >ul >li >span >img{
+.category > div >ul >li >a {
+   text-decoration: none;
+   font-size: 20px;
+  
+}
+.category > div >ul >li >a>span >img{
    margin-right: 10px;
+}
+.category > div >ul >li >a>span > p{
+   color: black;
 }
 .category > div >ul >li{
    height: 50px;
@@ -286,8 +386,9 @@ ul{
    height:90%;
    padding: 10px;
 }
+ /* banner */
 #banner{
-   border:1px solid red;
+   /* border:1px solid red; */
    width:90%;
    height:auto;
    margin:auto;
@@ -297,18 +398,29 @@ ul{
 #banner>img{
    width:100%;
 }
+
+/* carousal  */
 #carousel1{
  display:flex;
+ box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
  border:1px solid white;
  width:90%;
  margin:auto;
 }
+
+
 #carousel1>div{
    border:1px solid white;
    text-align: center;
    /* display: block; */
-   font-size: 20px;
+   
+   font-size: 20px;   
+   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;  
+   
+   padding: 10px;
+
 }
+
 .carousel1_cart{
    border:1px solid white;
    display:flex;
@@ -321,22 +433,50 @@ ul{
 
 .carousel1_cart>button{
    padding: 20px;
+   border-radius: 5px;
    border:0px;
+   width: 120px;
    background-color: #dd0285;
    font-weight:bold;
    color: aliceblue;  
    cursor: pointer;
  }
+
+
+  
+
+.carousal1 >div{
+   /* border:1px solid green; */
+   text-align: center;
+   padding: 10px;
+   font-size: 10px;
+   font-weight: lighter;
+   display: block;
+   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+#carousel1>div>button{
+    background-color: pink;
+    border:0px;
+    margin:10px;
+    padding:20px;
+    font-size: 17px;
+    border-radius: 20px;
+}
+
+/* images  */
+
 #images{
-   border:1px solid red;
+   /* border:1px solid red; */
    width:90%;
+   
    margin: auto;
    display: flex;
    justify-content:space-between;
    margin-top:20px;
 }
 #images>div{
-   border:1px solid green;
+   /* border:1px solid green; */
    width:49%;
 }
 #images>div img{
@@ -356,17 +496,33 @@ ul{
     padding:20px;
 }
 
-/* banner2 */
+
 /* filtered product append is pending for now */
+
+/* category2  */
 .catagory2>div:hover{
+    color:  rgb(205, 76, 119);
     border:1px solid white;
-    background-color: rgb(164, 42, 63);
+
+    background-color:  rgb(244, 203, 217);
+
     cursor: pointer;
    text-decoration-color: aliceblue;
 }
 
 #filteredData{
     border:1px solid white;
+
+    /* border:1px solid yellow; */
+    /* background-color:  rgb(238, 170, 193); */
+    color: rgb(205, 76, 119); 
+
+
+}
+
+#filteredData{
+    /* border:1px solid red; */
+
     width:90%;
     margin:auto;
     display:flex;
@@ -374,9 +530,13 @@ ul{
     margin-bottom: 20px;
 }
 #filteredData > div{
+
     border:1px solid white;
+    padding: 10px;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
+
 .mainCart{
    display:flex;
    width:165px;
@@ -393,11 +553,23 @@ ul{
   font-weight:bold;
   color: aliceblue;  
   cursor: pointer;
+
 }
 
+#filteredData > div>button{
+    padding: 20px;
+    margin: 10px;
+    background-color: pink;
+    border:0px;
+    border-radius: 20px;   
+}
+
+
+
+/* banner2 */
 #banner2{
 
-    border:1px solid blue;
+    /* border:1px solid blue; */
     width:90%;
     margin:auto;
 }
@@ -408,7 +580,20 @@ ul{
     
 }
 
-
+/* paragraph  */
+#para{
+   width: 90%;
+   margin: auto;
+}
+#para > h3{
+   font-size: 30px;
+   margin: 20px;
+   color: rgb(97, 96, 96);
+}
+#para > p{
+    margin: 30px;
+    color: rgb(117, 116, 116);
+}
 
 
 
@@ -422,30 +607,40 @@ ul{
    background-color: rgb(40, 39, 39);
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    color: white;
+   padding: 20px;
+   margin-top: 20px;
 }
 #footer-top{
    display: flex;
    justify-content: space-evenly;
 }
+#footer-top >div {
+   padding: 20px;
+}
 #footer-bot{
    display: flex;
-   justify-content: space-around;
+   justify-content:space-evenly;
 }
 #h4{
    margin-left: 500px;
+   margin: 5px;
 }
 #input{
    margin-top: 10px;
    margin-right: 100px;
+   display: flex;
 }
 #subscribe{
-   height: 30px;
+   height: 40px;
    width: 250px;
+
 }
 #subs-btn{
-   height: 35px;
+   height: 44px;
+   width: 100px;
    background-color: rgb(226, 61, 154);
    border: rgb(226, 61, 154) ;
    color: aliceblue;
+   font-weight: bolder;
 }
 

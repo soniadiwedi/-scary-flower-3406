@@ -1,0 +1,31 @@
+#adminLogin{
+    width: 40%;
+    margin: auto;
+    height: 400px;
+    background-color:  #e766b3;
+    
+    
+}
+.admin_login{
+    width: 80%;
+    margin: auto;
+    font-size: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#adminLoginBtn{
+    background-color: #dd0285;
+    border-radius: 5px;
+}
+#contact{
+    width: 80%;
+    margin: auto;
+}

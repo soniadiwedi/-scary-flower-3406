@@ -14,6 +14,8 @@
 
 //console.log("This console data", obj);
 
+//code for collecting inputs from form update section and storing them in a obj
+
 let addProductBtn = document.querySelector("#addProductButton");
 addProductBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -23,7 +25,7 @@ addProductBtn.addEventListener("click", (event) => {
     obj[allProductDetails[i].id] = allProductDetails[i].value;
   }
 
-  console.log(obj);
+  //console.log(obj);
   addProduct(obj);
 });
 //Code for POST method to append data to our data base
@@ -48,26 +50,70 @@ async function addProduct(obj) {
 }
 
 // Code for displaying all the product data to our table
-
-function createTabe(arr) {
+let model = document.querySelector("#itemEditModel");
+let td5;
+let td6;
+function createTable(arr) {
   console.log("arr", arr);
-
+  document.querySelector("tbody").innerHTML = "";
   arr.forEach((ele) => {
     let tr = document.createElement("tr");
     let td1 = document.createElement("td");
     let td2 = document.createElement("td");
     let td3 = document.createElement("td");
     let td4 = document.createElement("td");
-    let td5 = document.createElement("button");
+    let edit_btn = document.createElement("button");
+
+    edit_btn.innerText = "Edit";
+    edit_btn.style.backgroundColor = "#dd0285";
+    edit_btn.style.padding = "5px";
+    edit_btn.style.border = "none";
+    edit_btn.style.borderRadius = "5px";
+    edit_btn.style.marginInlineStart = "10px";
+    edit_btn.style.width = "70%";
+
+    edit_btn.addEventListener("click", () => {
+      console.log(ele);
+      model.style.display = "block";
+      let all_model_input = document.querySelectorAll(
+        "#itemEditModelContent form input"
+      );
+      all_model_input[0].value = ele.name;
+      all_model_input[1].value = ele.price;
+      all_model_input[2].value = ele.image;
+      all_model_input[3].value = ele.id;
+      //console.log(all_model_input);
+    });
+    let delete_btn = document.createElement("button");
+    delete_btn.innerText = "Delete";
+    delete_btn.style.backgroundColor = "#dd0285";
+    delete_btn.style.padding = "5px";
+    delete_btn.style.border = "none";
+    delete_btn.style.borderRadius = "5px";
+    delete_btn.style.marginInlineStart = "10px";
+    delete_btn.style.width = "70%";
+    delete_btn.addEventListener("click", () => {
+      console.log("delete btn got clicked", ele.id);
+      deleteProduct(ele.id);
+    });
+    td5 = document.createElement("td");
+
+    td6 = document.createElement("td");
 
     td1.innerText = ele.name;
     td2.innerText = ele.price;
+    td2.style.textAlign = "center";
     td3.innerText = ele.image.substring(0, 20);
     //console.log(str.substring(1, 3));
-    td3.setAttribute("class", "td3");
+
     td4.innerText = ele.category;
-    td5.innerText = "Edit";
-    tr.append(td1, td2, td3, td4, td5);
+    td4.style.textAlign = "center";
+    td5.append(edit_btn);
+    //td5.setAttribute("class", "td5");
+
+    td6.append(delete_btn);
+
+    tr.append(td1, td2, td3, td4, td5, td6);
     document.querySelector("tbody").append(tr);
   });
 }
@@ -88,7 +134,7 @@ async function displayTable() {
     );
     let x = await productDetails.json();
     //console.log(x);
-    createTabe(x);
+    createTable(x);
 
     // if (productDetails.ok) {
     //   alert("Table Displayed");
@@ -99,3 +145,107 @@ async function displayTable() {
   }
 }
 displayTable();
+
+//code for editing the table and making the model appear.
+//let all_button = document.querySelectorAll(".td5");
+
+//Display model testing
+// let displayModelBtn = document.querySelector("#displayModel");
+// let model = document.querySelector("#itemEditModel");
+// displayModelBtn.addEventListener("click", (event) => {
+//   console.log("display btn got clicked");
+//   model.style.display = "block";
+// });
+
+// window.onclick = function (event) {
+//   if (event.target == modal) {
+//     model.style.display = "none";
+//   }
+// };
+
+//code for collecting data from modalform
+
+let edit_Product = document.querySelector("#editProduct");
+edit_Product.addEventListener("click", (event) => {
+  event.preventDefault();
+  let model_obj = {};
+  let model_input = document.querySelectorAll(".modelInput");
+  //console.log(model_input);
+  for (let i = 0; i < model_input.length - 1; i++) {
+    model_obj[model_input[i].id] = model_input[i].value;
+  }
+  let model_input_id = model_input[3].value;
+
+  console.log(model_obj, model_input_id);
+  editProduct(model_input_id, model_obj);
+  //addProduct(obj);
+});
+
+async function editProduct(id, model_obj) {
+  try {
+    let x = await fetch(
+      `https://6398167e77359127a046d08d.mockapi.io/products/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(model_obj),
+      }
+    );
+    model.style.display = "none";
+    window.location.reload();
+    //displayTable();
+  } catch (error) {
+    console.log("Bad request");
+  }
+}
+
+//code for deleting an element from table
+
+async function deleteProduct(id) {
+  try {
+    let x = await fetch(
+      `https://6398167e77359127a046d08d.mockapi.io/products/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    window.location.reload();
+    //displayTable();
+  } catch (error) {
+    console.log("Bad request for deleting");
+  }
+}
+
+//code for the pagination
+///blogs?page=1&limit=10
+let selectBox = document.querySelector("#itemPerPage").value;
+
+async function paginateProduct(page) {
+  try {
+    let productDetails = await fetch(
+      `https://6398167e77359127a046d08d.mockapi.io/products?page=${page}&limit=${selectBox}`,
+      {
+        method: "GET",
+        //body: JSON.stringify(obj),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    let y = await productDetails.json();
+    console.log(y);
+    createTable(y);
+    if (productDetails.ok) {
+      alert("Data appended");
+    }
+  } catch (error) {
+    alert("Bad request");
+  }
+}
+//paginateProduct();

@@ -1,4 +1,5 @@
-#footer{
+
+ #footer{
     background-color: rgb(40, 39, 39);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
@@ -27,112 +28,58 @@
     background-color: rgb(226, 61, 154);
     border: rgb(226, 61, 154) ;
     color: aliceblue;
- }
+  }  
 
 
- /* Cart html page append data */
-
- #CartItems{
-   display:flex;
-   border:1px solid red;
- }
- #left_block{
-   border:4px solid green;
-   width:20%;
-   height:250px;
- }
- #middle_block{
-   display:grid;
-   grid-template-columns: repeat(3,300px);
-   gap:10px;
-
- }
- #middle_block>div{
-   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-   text-align: center;   
- }
- #middle_block>div>button{
-   padding: 10px;
-   margin:10px;
-   background-color: #cd4c77;
-   border:0px;
-   color:white;
-   font-weight:bold;
- }
- #right_block{
-   border:4px solid orange;
-   width:300px;
-   
- }
-
- /* ----------------------------------- */
-/* .input{
-   display: flex;
-   width: 10%;
-   flex-direction: column;
-   margin-bottom: 20px;
-   line-height: 30px;
-  } */
+ 
+ 
 
 
-  #right_block>h2{
-   
-   width:300px;
-   margin-left:70px;
-   margin-bottom: 20px;
- }
-    .input>.label{
-   
-   margin-left:20px;
-   margin-top: 10px;
+
+ /* favovrites html page append here */
+
+ #favItem{
+    display:flex;
+    border:1px solid white;
+  }
+  #left_block{
+    border:4px solid green;
+    width:20%;
+    height:250px;
+  }
+  #middle_block{
+    display:grid;
+    grid-template-columns: repeat(4,300px);
+     gap:10px;
+  }
+  #middle_block>div{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    text-align: center;   
+  }
+  #middle_block>div>button{
+    padding: 10px;
+    margin:10px;
+    background-color: #cd4c77;
+    border:0px;
+    color:white;
+    font-weight:bold;
   }
  
-  .select{
-   margin-top: 8px;
-   margin-bottom: 20px;
-   outline: none;
-   /* padding: 10px 10px; */
-   font-size: 15px;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  #pincode >label{
-    margin-left: 20px;
-    margin-bottom: 20px; 
-  }
-  #pincode input{
-    margin-bottom: 20px;
-    outline: none; 
-    margin-top: 5px;
-  }
-
-  #price span{
-    margin-left: 20px;
-  }
-
-  .btn{
-   padding: 10px;
-   border: none;
-   margin:30px;
-   border-radius: 5%;
-  }
-
-  
-  .btn:hover{
-    background-color: #cd4c77;
-   cursor: pointer;
-   color: white;
-  }
-
-  #pr{
-    margin-top: 20px;
-  }
 
 
 
 
 
-  
-  *{
+
+
+
+
+
+
+
+
+
+ *{
    margin: 0;
    padding: 0;
 }
