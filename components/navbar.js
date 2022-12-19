@@ -103,7 +103,7 @@ function header(){
           <button><i class="fa-solid fa-user"></i>
               <div class="myaccount">
                 <ul>
-                 <li><a href="login.html">Login</a></li>
+                 <li><a href="/-scary-flower-3406/login.html">Login</a></li>
                  <hr>
                  <li><a href="signin.html">Register</a></li>
                 </ul>
@@ -122,7 +122,7 @@ function headerInside() {
   return `
     <img src ="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg">
         <div>
-           <a href="/-scary-flower-3406/index.html"></a><img src="/-scary-flower-3406/picture/Glam Goddess.png"></a>
+           <img src="/-scary-flower-3406/picture/Glam Goddess.png">
            <div id="search">
               <select>
                 <option value="">All Categories</option>
@@ -155,14 +155,14 @@ function headerInside() {
           <button><i class="fa-solid fa-user"></i>
               <div class="myaccount">
                 <ul>
-                 <li><a href="login.html">Login</a></li>
+                 <li><a href="/-scary-flower-3406/login.html">Login</a></li>
                  <hr>
-                 <li><a href="signin.html">Register</a></li>
+                 <li><a href="/-scary-flower-3406/signin.html">Register</a></li>
                 </ul>
               </div>
           </button>
           <span>My Account</span>
-          <a href="./scary-flower-3406/adminLogin.html"><button><i class="fa-solid fa-house"></i></button></a>
+          <a href="/-scary-flower-3406/adminLogin.html"><button><i class="fa-solid fa-house"></i></button></a>
           
         </div>
         </div>

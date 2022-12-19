@@ -1,11 +1,21 @@
-import { footer,navbar,headerInside } from "../components/navbar.js";
+import { footer,navbar,headerInside,allCategory } from "../components/navbar.js";
 
+let footer_Part = document.getElementById("footer");
+footer_Part.innerHTML = footer();
 
+let header_part = document.getElementById("header");
+header_part.innerHTML = headerInside();
+
+let navbar_part = document.getElementById("navbar");
+navbar_part.innerHTML = navbar();
+
+let category = document.getElementById("left_block");
+category.innerHTML = allCategory();
 //window.location.reload()
 let favData = JSON.parse(localStorage.getItem("favCart"));
 
-
- console.log(favData)
+// console.log(footer())
+//  console.log(favData)
   display(favData)
 
 
@@ -43,19 +53,8 @@ let favData = JSON.parse(localStorage.getItem("favCart"));
 }
 
 
-let header_part = document.getElementById("header");
-header_part.innerHTML = headerInside();
-
-let navbar_part = document.getElementById("navbar");
-navbar_part.innerHTML = navbar();
 
 
 
-  let footer_Part = document.getElementById("footer");
-  footer_Part.innerHTML = footer();
 
-  let header_part =document.getElementById("header");
-  header_part.innerHTML = headerInside();
-
-  let navbar_part = document.getElementById("navbar");
-  navbar_part.innerHTML=navbar();
+  

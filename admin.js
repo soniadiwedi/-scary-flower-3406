@@ -67,6 +67,8 @@ function createTable(arr) {
     edit_btn.innerText = "Edit";
     edit_btn.style.backgroundColor = "#dd0285";
     edit_btn.style.padding = "5px";
+    edit_btn.style.color = "white";
+    edit_btn.style.fontWeight ="bolder";
     edit_btn.style.border = "none";
     edit_btn.style.borderRadius = "5px";
     edit_btn.style.marginInlineStart = "10px";
@@ -89,6 +91,8 @@ function createTable(arr) {
     delete_btn.style.backgroundColor = "#dd0285";
     delete_btn.style.padding = "5px";
     delete_btn.style.border = "none";
+    delete_btn.style.color = "white";
+    delete_btn.style.fontWeight = "bolder";
     delete_btn.style.borderRadius = "5px";
     delete_btn.style.marginInlineStart = "10px";
     delete_btn.style.width = "70%";
