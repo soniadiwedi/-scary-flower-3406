@@ -1,43 +1,53 @@
+/* footer CSS*/
 #footer{
-    background-color: rgb(40, 39, 39);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
- }
- #footer-top{
-    display: flex;
-    justify-content: space-evenly;
- }
- #footer-bot{
-    display: flex;
-    justify-content: space-around;
- }
- #h4{
-    margin-left: 500px;
- }
- #input{
-    margin-top: 10px;
-    margin-right: 100px;
- }
- #subscribe{
-    height: 30px;
-    width: 250px;
- }
- #subs-btn{
-    height: 35px;
-    background-color: rgb(226, 61, 154);
-    border: rgb(226, 61, 154) ;
-    color: aliceblue;
- }
+   background-color: rgb(40, 39, 39);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+#footer-top{
+   display: flex;
+   justify-content: space-evenly;
+}
+#footer-top >div {
+   padding: 20px;
+}
+#footer-bot{
+   display: flex;
+   justify-content:space-evenly;
+}
+#h4{
+   margin-left: 500px;
+   margin: 5px;
+}
+#input{
+   margin-top: 10px;
+   margin-right: 100px;
+   display: flex;
+}
+#subscribe{
+   height: 40px;
+   width: 250px;
 
+}
+#subs-btn{
+   height: 44px;
+   width: 100px;
+   background-color: rgb(226, 61, 154);
+   border: rgb(226, 61, 154) ;
+   color: aliceblue;
+   font-weight: bolder;
+}
 
  /* Cart html page append data */
 
  #CartItems{
    display:flex;
-   border:1px solid red;
+   /* border:1px solid red; */
  }
  #left_block{
-   border:4px solid green;
+   /* border:4px solid green; */
    width:20%;
    height:250px;
  }
@@ -60,7 +70,7 @@
    font-weight:bold;
  }
  #right_block{
-   border:4px solid orange;
+   /* border:4px solid orange; */
    width:300px;
    
  }
