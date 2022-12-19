@@ -1,3 +1,4 @@
+
 import { footer,header,navbar } from "./components/navbar.js";
 
 let header_part = document.getElementById("header")
@@ -5,6 +6,7 @@ header_part.innerHTML = header();
 
 let navbar_part = document.getElementById("navbar")
 navbar_part.innerHTML=navbar();
+
 
 
 
