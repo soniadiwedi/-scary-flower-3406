@@ -8,8 +8,6 @@ Order online for the best range of skincare products and see the benefits for yo
  <h1>Home Page</h1>
     <img src="https://i.postimg.cc/brVPGRj4/Screenshot-220.png" alt=""/>
      <img src="https://i.postimg.cc/DZJjndwx/Screenshot-223.png" alt=""/>
-  <h1>Makeup Page</h1>
-    <img src="https://i.postimg.cc/Tw0w2mNW/Screenshot-224.png" alt=""/>
      <h1>Hair Page</h1>
     <img src="https://i.postimg.cc/65vXYnVL/Screenshot-225.png" alt=""/>
      <h1>Login Page</h1>
