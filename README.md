@@ -39,8 +39,9 @@ Order online for the best range of skincare products and see the benefits for yo
     </ul>
         <h1>Creators</h1>
     <ul>
-        <li><a href="https://github.com/Dhiman-22">@Vivek Dhiman</a></li>
+    <li><a href="https://github.com/Dhiman-22">@Vivek Dhiman</a></li>
    <li><a href="">@Vidhi Sharma</a></li>
    <li><a href="">@Sonia Dwivedi</a></li>
    <li><a href="">@Shashank Bijapur</a></li>
    <li><a href="">@Anshuman</a></li>
+   </ul>
